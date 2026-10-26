@@ -14,7 +14,7 @@ Bunu ölçmek için **konu hep aynı tutuluyor**, sadece skill değişiyor. Böy
 | 2 | [Impeccable](https://github.com/pbakaus/impeccable) (Paul Bakaus) | [`2-impeccable/`](2-impeccable/) | Bitti |
 | 3 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) (Leonxlnx) | [`3-taste/`](3-taste/) | Bitti |
 | 4 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (NextLevelBuilder) | [`4-ui-ux-pro-max/`](4-ui-ux-pro-max/) | Bitti |
-| 5 | [Emil Kowalski Skills](https://github.com/emilkowalski/skills) | | Sırada |
+| 5 | [Emil Kowalski Skills](https://github.com/emilkowalski/skills) | [`5-emil-kowalski/`](5-emil-kowalski/) | Bitti |
 
 Bu beş skill, 2026'da "en iyi UI skill'leri" listelerinde en sık geçenler arasından seçildi. GitHub yıldızlarına ve güncelliğine de bakıldı.
 
@@ -161,16 +161,86 @@ Ardından üç bakış turu yapıldı. Son puan: tasarım 8, kullanılabilirlik 
 - Skill'in script'leri `python3 -I` ile çalışmıyor, çünkü kendi modüllerini script klasöründen yüklüyor. Kod okunup yalnız standart kütüphane kullandığı görüldükten sonra normal çalıştırıldı.
 - Repoda ana skill'in yanında altı yan skill daha var (marka, slayt, afiş gibi). Bu iş için yalnız `ui-ux-pro-max` kuruldu.
 
+## 5. Emil Kowalski Skills
+
+![Emil Kowalski Skills ile yapılan site](ekranlar/5-emil-kowalski.png)
+
+**Skill nasıl çalışıyor:** Tek bir skill değil, 15 skill'lik bir takım. Yazarı Vercel ve Linear'da çalışmış bir tasarım mühendisi, Sonner ve Vaul kütüphanelerini o yazmış. Diğer dört skill'den farkı şu: konu, renk ya da yerleşim fikri vermiyor. Odaklandığı şey işçilik: hareket, etkileşim ve "kimsenin fark etmediği ayrıntılar". Script yok, hepsi markdown. Bu iş için web'e ait 12 skill kuruldu: Swift, React Native ve Sonner'a özel olanlar dışarıda kaldı. Her skill tek bir iş yapıyor, sıra şöyle kuruldu:
+
+1. **emil-design-eng ve apple-design:** Temel duruş.
+   - Sistem yazı tipi kullanılır, harf aralığı boya göre ayarlanır.
+   - Düz çizgi yerine yarı saydam halka gölge kullanılır.
+   - Açık ve koyu tema birlikte yapılır.
+   - Üst çubuk saydamdır, içerik altından akar.
+2. **prototype:** Sayfanın en önemli tek parçası için gerçekten farklı üç sürüm yapılır. Bu denemede parça ders yer ayırmaydı. Sürümler altta sabit bir seçici şeritten değiştirilir. Şeridin görünüşü skill'de birebir tanımlı.
+3. **find-animation-opportunities:** Hareketsiz sayfa taranır. Her aday dört soruluk bir kapıdan geçer:
+   - Ziyaretçi bunu ne sıklıkla görür?
+   - Hareketin amacı ne?
+   - 300 ms'nin altında kalabilir mi?
+   - Okunan veriyi oynatıyor mu?
+
+   Reddedilenleri yazmak zorunlu.
+4. **animate:** Kapıdan geçenler yapılır. Değerler skill'in tablolarından gelir, uydurulmaz:
+   - Eğriler: `cubic-bezier(0.23, 1, 0.32, 1)` gibi güçlü özel eğriler. `ease-in` hiç kullanılmaz.
+   - Yalnız `transform` ve `opacity` canlandırılır.
+   - Hiçbir şey `scale(0)`'dan başlamaz.
+   - Klavyeyle yapılan şey animasyonsuzdur.
+5. **break-ui:** Sayfa en kötü gerçekçi veriyle kırılmaya çalışılır. Örnekler: uzun desen adları, `KC-RÜSTEMPAŞA-1561` gibi kodlar, fiyatı ya da çizimi olmayan desen, boş liste, tek yer. Veri, gerçek verinin girdiği yerden değişir, bileşene dokunulmaz. Seçici yalnız geliştirme içindir.
+6. **mobile-native:** Telefon katmanı:
+   - dokunma parıltısı,
+   - `:active` ile basma geri bildirimi,
+   - güvenli alanlar,
+   - her tema için ayrı `theme-color`.
+7. **review-animations:** Sert bir inceleme. Varsayılan tutum "işaretle", onay hak edilir. Çıktı Önce / Sonra / Neden tablosu ve sonunda Block ya da Approve. İncelemeyi konuşmayı görmemiş ayrı bir ajan yaptı.
+8. **animation-performance:** Hareket eden her şeyin envanteri: neyle hareket ediyor, hangi özelliği canlandırıyor.
+
+**Ortaya çıkan:** Beş deneme içinde görsel olarak en sade, etkileşim olarak en işlenmiş sayfa. Görünüşü bir yazılım ürününün sayfasına benziyor: sistem yazı tipi, beyaz kartlar, kobalt tek vurgu, koyu tema.
+
+- **Yapım sekmeleri:** Etkin sekme, kobalt bir kopya listenin `clip-path` ile kırpılmasıyla gösteriliyor. Yazı rengi ve zemin tek parça gibi birlikte kayıyor. Karo da o adımdaki katmanlarına geçiyor: gövde, tahrir, boya, sır, fırın. Klavyeyle geçişte animasyon yok.
+- **Desenler:** Tıklanınca ortada bir pencere açılıyor. Pencere 0.96 ölçekten 250 ms'de büyüyor, 150 ms'de kapanıyor. Esc ile animasyonsuz kapanıyor. "Not al" desen kodunu bu tarayıcıda saklıyor. Üst çubukta not sayısı çıkıyor, ziyaret bölümünde "gelince bu kodları gösterin" listesi beliriyor.
+- **Bildirimler:** Sonner gibi çalışıyor:
+  - alttan gelip alta gidiyor,
+  - "Geri al" düğmesi var,
+  - fare üzerindeyken ve sekme gizliyken süre duruyor,
+  - aşağı çekip atılabiliyor, hızlı bir fiske de yetiyor,
+  - yukarı çekince giderek artan bir direnç var,
+  - yığın kaydırılarak yeniden diziliyor.
+- **Dersler:** Prototipte kazanan "Sade liste". Satır açılıyor, kişi sayısı seçiliyor, "E-postayla yer ayırt" tarih, ders ve kişi sayısı yazılı bir e-posta açıyor.
+- **Ziyaret:** "Adresi kopyala" düğmesinin etiketi 2 piksellik bir bulanıklık köprüsüyle "Kopyalandı"ya dönüyor. Üstte İstanbul saatine göre "Şu an açık" bilgisi var.
+- Sayfa açılırken ya da kaydırırken hiçbir şey belirmiyor. Bu bilinçli: tarama bunları "amacı yok" diye reddetti.
+
+**Süreç:** Orta uzunlukta. Adımlar şunlardı:
+
+- üç sürümlü prototip,
+- yedi fırsat ve altı ret,
+- en kötü veriyle sekiz kırılma, hepsi düzeltildi,
+- iki inceleme turu: önce Block, sonra Approve.
+
+Notlar, prototip ekranları ve bütün tablolar [`.emil/notes.md`](.emil/notes.md) dosyasında.
+
+**Dürüst notlar:**
+
+- Skill takımı görsel yön vermiyor. Konuya dair bütün kararlar benim (renkler, çizimler, metin, yerleşim). Skill yalnız nasıl hissettirmesi gerektiğini söylüyor. Bu yüzden sayfa İznik'ten çok bir yazılım ürününe benziyor. Diğer denemelerle yan yana konunca en "kişiliksiz" sayfa bu.
+- `prototype` ve `break-ui` raporlayıp durmayı, seçimi kullanıcıya bırakmayı söylüyor. "Bana iş bırakma" dendiği için ikisinde de kararı ben verdim:
+  - Prototipte "Sade liste"yi seçtim. Gerekçe skill'in istediği gibi: ziyaretçi burada tarih, yer ve ücreti karşılaştırıyor.
+  - `break-ui`'da bulduğum her kırılmayı düzelttim.
+- `break-ui` gerçek bir hata buldu. Modal pencere açıkken dışarıdaki her şey `inert` olur, bu yüzden "Geri al" düğmesi görünüyordu ama tıklanamıyordu. Çözüm: bildirim kutusu `popover` oldu ve pencere açıkken pencerenin içine taşınıyor. Bu çözüm de incelemede yeni bir hataya yol açtı (giriş animasyonunun yeniden oynaması), o da düzeltildi.
+- İncelemeci ilk turda iki hissi bozan hata buldu. Biri sürüklenip bırakılan bildirimin geri yukarı dönmesiydi. İkisi de kodu okuyarak bulundu, ekran görüntüsünde görünmüyordu.
+- Skill'ler gerçek telefonda denemeyi şart koşuyor. Bu yapılmadı, yalnız headless Chrome'un mobil öykünmesi kullanıldı. Bildirimi çekip atmanın hissi ve iOS'ta `:active` (boş `touchstart` dinleyicisiyle) doğrulanmadı. Pencerenin kapanış animasyonu Firefox'ta denenmedi.
+- Sekme ve karo geçişleri skill'in "ertesi gün taze gözle bak" kuralına göre sonradan yeniden izlenmedi.
+- Prototip sayfası skill'in kuralı gereği silindi, yalnız ekranları kaldı. En kötü veri seçici ise kalıcı test olarak duruyor: `5-emil-kowalski/index.html?veri=en-kotu` (Demo, En kötü, Boş, Tek).
+- Ölçüm ve ekran görüntüsü için Chrome'u açan küçük bir script yazıldı (repoda değil). Skill'in kendi aracı yok.
+
 ## Karşılaştırma
 
-| | frontend-design | Impeccable | Taste Skill | UI/UX Pro Max |
-|---|---|---|---|---|
-| Kodlamadan önce | Kısa bir plan | Sorular, ürün dosyası, yedi aday yön, sözleşme | Envanter, argüman, script'in çektiği üç yön, fikir cümlesi | Veritabanı araması, tasarım sistemi dosyası, sayfa sapmaları |
-| Fikir | Konuya uygun ama beklenen | Konunun içinden çıkan, alışılmadık | Konudan çıkan ama yönün kalıbına oturan | Kategorinin kalıbı (kaydırdıkça anlatı), içeriği konuya uyarlanmış |
-| Görseller | Kodla çizim | Kodla çizim | Gerçek müze ve arşiv görselleri, video, kaynaklı | Kodla çizim, Lucide ikonlar |
-| Kontrol | Kendi ekran görüntüsüne bakıp düzeltme | Bağımsız inceleyici, iki düzeltme turu | Tarayıcıda ölçüm (FAIL/WARN), jüri puanlı üç bakış turu | Teslim öncesi kural listesi (araç yok, elle ve yardımcı script'le) |
-| Çıktılar | Site | Site, PRODUCT.md, DESIGN.md, design.json | Site, notlar, yön dosyası, ölçüm görüntüleri | Site, MASTER.md, sayfa sapma dosyası |
-| Süre ve maliyet | Düşük | Yüksek | En yüksek | Düşük–orta |
+| | frontend-design | Impeccable | Taste Skill | UI/UX Pro Max | Emil Kowalski |
+|---|---|---|---|---|---|
+| Kodlamadan önce | Kısa bir plan | Sorular, ürün dosyası, yedi aday yön, sözleşme | Envanter, argüman, script'in çektiği üç yön, fikir cümlesi | Veritabanı araması, tasarım sistemi dosyası, sayfa sapmaları | Görsel plan yok; en önemli parçanın üç sürümlü prototipi |
+| Fikir | Konuya uygun ama beklenen | Konunun içinden çıkan, alışılmadık | Konudan çıkan ama yönün kalıbına oturan | Kategorinin kalıbı (kaydırdıkça anlatı), içeriği konuya uyarlanmış | Konu fikri yok; fikir etkileşimin kendisi (sekme, pencere, bildirim, not alma) |
+| Görseller | Kodla çizim | Kodla çizim | Gerçek müze ve arşiv görselleri, video, kaynaklı | Kodla çizim, Lucide ikonlar | Kodla çizim |
+| Kontrol | Kendi ekran görüntüsüne bakıp düzeltme | Bağımsız inceleyici, iki düzeltme turu | Tarayıcıda ölçüm (FAIL/WARN), jüri puanlı üç bakış turu | Teslim öncesi kural listesi (araç yok, elle ve yardımcı script'le) | Hareket kapısı (sıklık, amaç, süre, işlev), en kötü veriyle kırma, bağımsız ajanla Block/Approve incelemesi, iki tur |
+| Çıktılar | Site | Site, PRODUCT.md, DESIGN.md, design.json | Site, notlar, yön dosyası, ölçüm görüntüleri | Site, MASTER.md, sayfa sapma dosyası | Site, notlar, prototip ekranları, en kötü veri seçici |
+| Süre ve maliyet | Düşük | Yüksek | En yüksek | Düşük–orta | Orta |
 
 ## Çalıştırma
 
@@ -199,6 +269,9 @@ npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-fro
 # UI/UX Pro Max (Python 3 gerekir, internet gerekmez)
 npx ui-ux-pro-max-cli init --ai claude
 # ya da: repodaki .claude/skills/ui-ux-pro-max klasörünü projenin .claude/skills/ altına kopyala
+
+# Emil Kowalski Skills (script yok, yalnız markdown)
+npx skills@latest add emilkowalski/skills
 ```
 
 ## Klasörler
@@ -209,10 +282,12 @@ index.html              karşılaştırma sayfası
 2-impeccable/           2. deneme (silkme.js: delik ve toz efekti, açık/kapalı durumu)
 3-taste/                3. deneme (karo.js: aşama akordeonu, renk değiştiren üst çubuk; gorseller/: müze ve arşiv görselleri, credits.json)
 4-ui-ux-pro-max/        4. deneme (sayfa.js: ilerleme çubuğu, etkin bölüm, adım adım yapılan karo)
+5-emil-kowalski/        5. deneme (sayfa.js: sekmeler, pencere, notlar, bildirimler, dersler; veri.js: veri; kotu-veri.js: yalnız ?veri= ile en kötü veri)
 PRODUCT.md              Impeccable'ın ürün dosyası
 DESIGN.md               Impeccable'ın tasarım sistemi kaydı
 .impeccable/            yön sözleşmesi, inceleme ekran görüntüleri, design.json
 .taste-skill/           notlar ve eleştiri turları, çekilen yön (direction.json), ölçüm ekran görüntüleri
 design-system/          UI/UX Pro Max'in tasarım sistemi (MASTER.md) ve sayfa sapmaları (pages/anasayfa.md)
+.emil/                  Emil Kowalski denemesinin notları ve prototip ekranları
 ekranlar/               README görselleri
 ```

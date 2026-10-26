@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0d10">
+  <meta name="color-scheme" content="light dark">
+  <title>Kobalt Çini, İznik</title>
+  <meta name="description" content="İznik'te sipariş üzerine elde çizilip boyanan çini karo ve panolar. Deseni, rengi ve ölçüyü atölyede birlikte seçiyoruz.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" class="gizli" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Lale karosu, katman katman: yapım sekmeleri katmanları sırayla açar -->
+      <symbol id="karo-lale" viewBox="0 0 200 200">
+        <rect class="k-govde" width="200" height="200" fill="#e4d6c1"/>
+        <rect class="k-astar" width="200" height="200" fill="#fbf9f4"/>
+        <g class="k-boya">
+          <path d="M6 6h188v188H6z M18 18v164h164V18z" fill="#1d3a8f" fill-rule="evenodd"/>
+          <g fill="#2a9d9a"><path d="M18 18h30a30 30 0 0 1-30 30z"/><path d="M182 18v30a30 30 0 0 1-30-30z"/><path d="M182 182h-30a30 30 0 0 1 30-30z"/><path d="M18 182v-30a30 30 0 0 1 30 30z"/></g>
+          <path d="M100 168c-24-10-46-32-54-62 22 16 40 36 54 62zm0 0c24-10 46-32 54-62-22 16-40 36-54 62z" fill="#3f7d4e"/>
+          <path d="M98 126h4v40h-4z" fill="#3f7d4e"/>
+          <path d="M100 128c-21-5-33-26-29-53 11 14 21 32 29 53zm0 0c21-5 33-26 29-53-11 14-21 32-29 53z" fill="#1d3a8f"/>
+          <path d="M100 56c15 20 17 50 0 72-17-22-15-52 0-72z" fill="#c8322b"/>
+          <g fill="#c8322b"><circle cx="56" cy="62" r="7"/><circle cx="144" cy="62" r="7"/></g>
+        </g>
+        <g class="k-tahrir" fill="none" stroke="#1b1f2e" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M6 6h188v188H6z M18 18v164h164V18z"/>
+          <path d="M18 18h30a30 30 0 0 1-30 30z M182 18v30a30 30 0 0 1-30-30z M182 182h-30a30 30 0 0 1 30-30z M18 182v-30a30 30 0 0 1 30 30z"/>
+          <path d="M100 168c-24-10-46-32-54-62 22 16 40 36 54 62zm0 0c24-10 46-32 54-62-22 16-40 36-54 62z"/>
+          <path d="M98 126h4v40h-4z"/>
+          <path d="M100 128c-21-5-33-26-29-53 11 14 21 32 29 53zm0 0c21-5 33-26 29-53-11 14-21 32-29 53z"/>
+          <path d="M100 56c15 20 17 50 0 72-17-22-15-52 0-72z"/>
+          <circle cx="56" cy="62" r="7"/><circle cx="144" cy="62" r="7"/>
+        </g>
+        <rect class="k-sir" width="200" height="200" fill="#f1efe9"/>
+      </symbol>
+
+      <symbol id="karo-cintemani" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#fbf9f4"/>
+        <g fill="#1d3a8f" stroke="#1b1f2e" stroke-width="1.6"><circle cx="74" cy="60" r="17"/><circle cx="126" cy="60" r="17"/><circle cx="100" cy="102" r="17"/></g>
+        <g fill="#fbf9f4"><circle cx="79" cy="55" r="6"/><circle cx="131" cy="55" r="6"/><circle cx="105" cy="97" r="6"/></g>
+        <g fill="none" stroke="#c8322b" stroke-width="8" stroke-linecap="round"><path d="M38 144q15-16 31 0t31 0 31 0 31 0"/><path d="M38 168q15-16 31 0t31 0 31 0 31 0"/></g>
+      </symbol>
+
+      <symbol id="karo-bulut" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#1d3a8f"/>
+        <path d="M-4 118c32-48 60 36 104-12s72-42 104 4" fill="none" stroke="#fbf9f4" stroke-width="24" stroke-linecap="round"/>
+        <path d="M-4 118c32-48 60 36 104-12s72-42 104 4" fill="none" stroke="#c8322b" stroke-width="6" stroke-linecap="round"/>
+        <g fill="#2a9d9a"><circle cx="44" cy="48" r="9"/><circle cx="156" cy="162" r="9"/><circle cx="152" cy="42" r="5"/><circle cx="48" cy="164" r="5"/></g>
+      </symbol>
+
+      <symbol id="karo-hatayi" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#fbf9f4"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#2a9d9a" stroke-width="10"/>
+        <g fill="#c8322b" stroke="#1b1f2e" stroke-width="1.4">
+          <ellipse cx="100" cy="62" rx="13" ry="29"/><ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(45 100 100)"/>
+          <ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(90 100 100)"/><ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(135 100 100)"/>
+          <ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(180 100 100)"/><ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(225 100 100)"/>
+          <ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(270 100 100)"/><ellipse cx="100" cy="62" rx="13" ry="29" transform="rotate(315 100 100)"/>
+        </g>
+        <circle cx="100" cy="100" r="19" fill="#1d3a8f" stroke="#1b1f2e" stroke-width="1.4"/>
+      </symbol>
+
+      <symbol id="karo-saz" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#fbf9f4"/>
+        <path d="M26 174C58 120 118 58 178 30 154 82 100 144 26 174z" fill="#3f7d4e" stroke="#1b1f2e" stroke-width="1.6"/>
+        <path d="M26 174C80 126 128 74 178 30" fill="none" stroke="#fbf9f4" stroke-width="2"/>
+        <g fill="#1d3a8f" stroke="#1b1f2e" stroke-width="1.4"><circle cx="58" cy="58" r="17"/><circle cx="150" cy="144" r="17"/></g>
+        <g fill="#c8322b"><circle cx="58" cy="58" r="5"/><circle cx="150" cy="144" r="5"/></g>
+      </symbol>
+
+      <symbol id="karo-rumi" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#c8322b"/>
+        <g fill="#1d3a8f" stroke="#fbf9f4" stroke-width="4" stroke-linejoin="round">
+          <path d="M100 20c44 0 64 42 42 74-10-20-26-24-42-10-16-14-32-10-42 10-22-32-2-74 42-74z"/>
+          <path d="M100 180c44 0 64-42 42-74-10 20-26 24-42 10-16 14-32 10-42-10-22 32-2 74 42 74z"/>
+        </g>
+      </symbol>
+
+      <symbol id="karo-yok" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#eceae4"/>
+        <path d="M0 40 40 0M0 100 100 0M0 160 160 0M20 200 200 20M80 200 200 80M140 200 200 140" stroke="#d9d5cc" stroke-width="10"/>
+        <text x="100" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#6b6760">Çizimi henüz yok</text>
+      </symbol>
+
+      <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-asagi" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-kapat" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-tamam" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+
+  <header class="ust">
+    <div class="ust-ic kap">
+      <a class="marka" href="#">Kobalt Çini</a>
+      <nav aria-label="Bölümler">
+        <ul class="menu" role="list">
+          <li><a href="#yapim">Yapım</a></li>
+          <li><a href="#desenler">Desenler</a></li>
+          <li><a href="#dersler">Dersler</a></li>
+          <li class="menu-hep"><a href="#ziyaret">Ziyaret</a></li>
+        </ul>
+      </nav>
+      <a class="notlar-cip" href="#ziyaret" hidden><span class="tab" id="not-sayisi">0</span> not</a>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="giris kap" aria-labelledby="giris-baslik">
+      <div class="giris-metin">
+        <p class="acik-durum" id="acik-durum">Salıdan pazara 10.00–18.00</p>
+        <h1 id="giris-baslik">İznik çinisi, duvarınıza göre elde yapılır</h1>
+        <p class="giris-alt">Kuvarslı çamurdan karo ve pano yapıyoruz, sipariş üzerine. Deseni, rengi ve ölçüyü atölyede, gün ışığında numunelere bakarak birlikte seçiyoruz.</p>
+        <div class="dugmeler">
+          <a class="btn btn-ana" href="#ziyaret">Atölyeye gelin <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+          <a class="btn btn-ikincil" href="#yapim">Nasıl yapılır</a>
+        </div>
+      </div>
+      <figure class="giris-karo">
+        <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: kobalt çerçeveli, ortasında mercan lale, iki yanında yeşil saz yaprağı olan bir karo"><use href="#karo-lale"/></svg>
+        <figcaption>Lale karosu, 20×20 cm. Çizimdir, fotoğraf değil.</figcaption>
+      </figure>
+    </section>
+
+    <section id="yapim" class="bolum kap" aria-labelledby="yapim-baslik">
+      <h2 id="yapim-baslik">Bir karo beş adımda, üç haftada yapılır</h2>
+      <p class="bolum-giris">Sırayı değiştirmiyoruz. Her adımda karonun o günkü hâlini görün.</p>
+      <div class="yapim">
+        <div class="sekmeler" data-sekmeler>
+          <div class="sekme-listesi" role="tablist" aria-label="Yapım adımları">
+            <button role="tab" id="s1" aria-controls="yapim-panel" aria-selected="false" tabindex="-1" data-asama="govde">Gövde</button>
+            <button role="tab" id="s2" aria-controls="yapim-panel" aria-selected="false" tabindex="-1" data-asama="tahrir">Tahrir</button>
+            <button role="tab" id="s3" aria-controls="yapim-panel" aria-selected="false" tabindex="-1" data-asama="boya">Boya</button>
+            <button role="tab" id="s4" aria-controls="yapim-panel" aria-selected="false" tabindex="-1" data-asama="sir">Sır</button>
+            <button role="tab" id="s5" aria-controls="yapim-panel" aria-selected="true" tabindex="0" data-asama="firin">Fırın</button>
+          </div>
+          <div class="sekme-listesi sekme-kopya" aria-hidden="true">
+            <span>Gövde</span><span>Tahrir</span><span>Boya</span><span>Sır</span><span>Fırın</span>
+          </div>
+        </div>
+        <div class="yapim-panel" id="yapim-panel" role="tabpanel" aria-labelledby="s5" tabindex="0">
+          <svg class="karo yapim-karo" data-asama="firin" viewBox="0 0 200 200" role="img" aria-label="Lale karosu, seçili adımdaki hâliyle"><use href="#karo-lale"/></svg>
+          <div class="yapim-metin">
+            <p class="gun tab" id="asama-gun">14–21. gün</p>
+            <h3 id="asama-ad">Fırın</h3>
+            <p id="asama-metin">Yaklaşık 900 derecede pişer, fırın bir gün soğur. Sır camlaşır, renkler ancak şimdi parlar. Paketleyip teslim ederiz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="desenler" class="bolum kap" aria-labelledby="desen-baslik">
+      <h2 id="desen-baslik">Desenler</h2>
+      <p class="bolum-giris">Karolar 20×20 cm, dörtlü set olarak hazırlanır. Beğendiğinizi not alın, gelince numune duvarında gösterelim. Fiyatlar örnektir.</p>
+      <ul class="desenler" role="list" id="desen-listesi"></ul>
+      <noscript><p>Desen listesi için JavaScript gerekiyor. Numuneleri atölyede görebilirsiniz.</p></noscript>
+    </section>
+
+    <section id="dersler" class="bolum kap" aria-labelledby="ders-baslik">
+      <h2 id="ders-baslik">Cumartesi dersleri</h2>
+      <p class="bolum-giris">Altı kişilik gruplar, 10.00–16.00. Malzeme ve öğle yemeği dahil. Boyadığınız karo pişirildikten sonra kargoyla gönderilir. Tarih ve ücretler örnektir.</p>
+      <div class="dersler" id="ders-listesi"></div>
+      <noscript><p>Yer ayırtmak için arayın: <a href="tel:+902240000000">0224 000 00 00</a></p></noscript>
+    </section>
+
+    <section id="ziyaret" class="bolum kap ziyaret" aria-labelledby="ziyaret-baslik">
+      <div>
+        <h2 id="ziyaret-baslik">Gelin, numunelere bakalım</h2>
+        <p class="bolum-giris">Her sipariş bir ziyaretle başlar. Yarım saat ayırın, çay bizden.</p>
+        <div class="dugmeler">
+          <a class="btn btn-ana" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%87ar%C5%9F%C4%B1+Sokak+14+%C4%B0znik" rel="noopener">Yol tarifi al <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+          <button class="btn btn-ikincil" type="button" id="adres-kopyala"><span class="kopya-ic" aria-live="polite">Adresi kopyala</span></button>
+        </div>
+        <div class="notlarim" id="notlarim" hidden>
+          <h3>Notlarınız</h3>
+          <p>Gelince bu kodları gösterin, numunelerini çıkaralım.</p>
+          <ul class="not-listesi" role="list" id="not-listesi"></ul>
+        </div>
+      </div>
+      <dl class="bilgiler">
+        <div><dt>Adres</dt><dd id="adres">Çarşı Sokak No 14, İznik, Bursa</dd></div>
+        <div><dt>Açık</dt><dd>Salıdan pazara, 10.00–18.00</dd></div>
+        <div><dt>Yol</dt><dd>İstanbul'dan Yenikapı–Yalova feribotu, Yalova'dan İznik otobüsü, yaklaşık bir saat. Bursa'dan otobüsle bir saat.</dd></div>
+        <div><dt>Telefon</dt><dd><a href="tel:+902240000000">0224 000 00 00</a></dd></div>
+        <div><dt>E-posta</dt><dd><a href="mailto:merhaba@kobaltcini.example">merhaba@kobaltcini.example</a></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="alt kap">
+    <p>Kobalt Çini hayalî bir atölyedir. Adres, telefon, fiyat ve tarihler örnektir. Karo görselleri çizimdir.</p>
+    <p>5. deneme: <a href="https://github.com/emilkowalski/skills">Emil Kowalski Skills</a> · <a href="../index.html">Bütün denemeler</a></p>
+  </footer>
+
+  <dialog class="pencere" id="desen-penceresi" aria-labelledby="pencere-baslik">
+    <div class="pencere-ic">
+      <svg class="karo" viewBox="0 0 200 200" role="img" id="pencere-karo"><use href=""/></svg>
+      <div class="pencere-metin">
+        <p class="kod tab" id="pencere-kod"></p>
+        <h3 id="pencere-baslik"></h3>
+        <p id="pencere-renk"></p>
+        <p class="fiyat tab" id="pencere-fiyat"></p>
+        <div class="dugmeler">
+          <button class="btn btn-ana" type="button" id="not-al">Not al</button>
+          <button class="btn btn-ikincil" type="button" data-kapat>Kapat</button>
+        </div>
+      </div>
+      <button class="kapat-x" type="button" data-kapat aria-label="Kapat"><svg class="ikon" aria-hidden="true"><use href="#i-kapat"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- popover: açık pencerenin de üstünde dursun diye üst katmanda -->
+  <ol class="bildirimler" id="bildirimler" popover="manual" aria-live="polite" aria-label="Bildirimler"></ol>
+
+  <script src="veri.js"></script>
+  <!-- break-ui deneme verisi: yalnız ?veri= ile -->
+  <script>if (/[?&]veri=/.test(location.search)) document.write('<script src="kotu-veri.js"><\/script>');</script>
+  <script src="sayfa.js"></script>
+</body>
+</html>
