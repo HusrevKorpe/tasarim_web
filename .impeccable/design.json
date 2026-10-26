@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T13:47:20+00:00",
+  "title": "Design System: Kobalt Çini",
+  "extensions": {
+    "colorMeta": {
+      "kagit": {
+        "role": "neutral",
+        "displayName": "Tracing Paper",
+        "canonical": "#e9ece8",
+        "oklch": "oklch(94.0% 0.006 137.8)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242524",
+          "#414340",
+          "#60625f",
+          "#818380",
+          "#a4a6a3",
+          "#c8cac7",
+          "#eeefed"
+        ]
+      },
+      "kagit-koyu": {
+        "role": "neutral",
+        "displayName": "Handled Paper",
+        "canonical": "#dde1dc",
+        "oklch": "oklch(90.5% 0.008 139.4)",
+        "tonalRamp": [
+          "#0a0b0a",
+          "#242624",
+          "#404340",
+          "#5f625e",
+          "#80837f",
+          "#a3a6a2",
+          "#c8cac7",
+          "#edefed"
+        ]
+      },
+      "komur": {
+        "role": "neutral",
+        "displayName": "Pounce Charcoal",
+        "canonical": "#2f2e31",
+        "oklch": "oklch(30.3% 0.005 301.2)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252526",
+          "#424144",
+          "#626164",
+          "#838285",
+          "#a5a4a7",
+          "#c9c9cb",
+          "#efeef0"
+        ]
+      },
+      "kursun": {
+        "role": "neutral",
+        "displayName": "Graphite Lead",
+        "canonical": "#55585b",
+        "oklch": "oklch(45.9% 0.006 248.0)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#242527",
+          "#404244",
+          "#5f6264",
+          "#808386",
+          "#a3a5a8",
+          "#c7c9cb",
+          "#edeff0"
+        ]
+      },
+      "cizgi": {
+        "role": "neutral",
+        "displayName": "Drafting Hairline",
+        "canonical": "#b9bdb7",
+        "oklch": "oklch(79.3% 0.009 134.9)",
+        "tonalRamp": [
+          "#0a0b0a",
+          "#242623",
+          "#40433f",
+          "#5f625d",
+          "#80837e",
+          "#a3a6a2",
+          "#c8cac6",
+          "#edefed"
+        ]
+      },
+      "kobalt": {
+        "role": "primary",
+        "displayName": "İznik Cobalt",
+        "canonical": "#1f3c9c",
+        "oklch": "oklch(40.0% 0.160 266.2)",
+        "tonalRamp": [
+          "#020824",
+          "#112150",
+          "#243c80",
+          "#3a5ab3",
+          "#597dd9",
+          "#83a3ef",
+          "#aec8ff",
+          "#dceeff"
+        ]
+      },
+      "kobalt-koyu": {
+        "role": "primary",
+        "displayName": "Kiln-Deep Cobalt",
+        "canonical": "#172d77",
+        "oklch": "oklch(33.1% 0.130 266.5)",
+        "tonalRamp": [
+          "#04091f",
+          "#152248",
+          "#2a3f74",
+          "#425da4",
+          "#627fc9",
+          "#8aa4e1",
+          "#b4c9f9",
+          "#dfeeff"
+        ]
+      },
+      "firuze": {
+        "role": "secondary",
+        "displayName": "Turquoise Glaze",
+        "canonical": "#2a8f8c",
+        "oklch": "oklch(59.3% 0.090 192.1)",
+        "tonalRamp": [
+          "#000f0f",
+          "#002c2b",
+          "#004d4b",
+          "#0c706d",
+          "#3c928f",
+          "#72b3b0",
+          "#a4d4d1",
+          "#d6f6f4"
+        ]
+      },
+      "mercan": {
+        "role": "tertiary",
+        "displayName": "İznik Coral Red",
+        "canonical": "#b4372b",
+        "oklch": "oklch(52.1% 0.163 29.3)",
+        "tonalRamp": [
+          "#1f0000",
+          "#480c07",
+          "#752018",
+          "#a5352a",
+          "#cc594b",
+          "#e68779",
+          "#ffb3a7",
+          "#ffe0d7"
+        ]
+      },
+      "sir": {
+        "role": "neutral",
+        "displayName": "Glaze White",
+        "canonical": "#fbfcfa",
+        "oklch": "oklch(99.0% 0.003 128.5)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252524",
+          "#424241",
+          "#616160",
+          "#828381",
+          "#a4a5a4",
+          "#c9c9c8",
+          "#eeeeee"
+        ]
+      },
+      "tahrir": {
+        "role": "neutral",
+        "displayName": "Tahrir Ink",
+        "canonical": "#1b2240",
+        "oklch": "oklch(26.2% 0.057 272.0)",
+        "tonalRamp": [
+          "#080b14",
+          "#202435",
+          "#3a4159",
+          "#57607f",
+          "#7781a2",
+          "#9ca4c0",
+          "#c2c8de",
+          "#e9eefe"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only, max 11ch, paper halo over the pricked field."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One per sheet; also the footer closing line."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Visit-step titles."
+      },
+      "place": {
+        "displayName": "Place",
+        "purpose": "Route station names."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero paragraph in graphite, max 34ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, 32–52ch measures."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav, title-block cells, table headings, footnotes."
+      },
+      "code": {
+        "displayName": "Pattern Code",
+        "purpose": "KC-xx codes the visitor quotes at the atelier; tabular figures."
+      },
+      "pencil-note": {
+        "displayName": "Pencil Note",
+        "purpose": "One Caveat graphite note per sheet, after its headline, rotated −1.5° with a 1px underline."
+      }
+    },
+    "shadows": [
+      {
+        "name": "fired-tile",
+        "value": "0 1px 2px rgb(27 34 64 / .12), 0 10px 24px -12px rgb(27 34 64 / .3)",
+        "purpose": "Under painted tiles only."
+      },
+      {
+        "name": "lifted-sheet",
+        "value": "drop-shadow(-6px 3px 6px rgb(47 46 49 / .22))",
+        "purpose": "filter on the pricked sheet half-covering a tile."
+      },
+      {
+        "name": "paper-halo",
+        "value": "0 0 18px #e9ece8, 0 0 6px #e9ece8",
+        "purpose": "text-shadow lifting hero text off the pricked motif."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-state",
+        "value": ".2s cubic-bezier(.2, .8, .2, 1)",
+        "purpose": "Button background changes."
+      },
+      {
+        "name": "ease-peel",
+        "value": ".6s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Pricked sheet peeling back from a tile (clip-path 46% to 88%)."
+      },
+      {
+        "name": "pounce-sweep",
+        "value": "1700ms, once, left to right",
+        "purpose": "On-load charcoal dusting through the hero's needle holes (9px hole spacing); pointer then keeps pouncing within 56px. Reduced motion: finished state, no sweep."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "680px"
+      },
+      {
+        "name": "medium",
+        "value": "900px"
+      },
+      {
+        "name": "two-column",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The painted brushstroke: the one cobalt action (Yol tarifi al), square, in the title block.",
+      "html": "<a class=\"ds-dugme\" href=\"#\">Yol tarifi al</a>",
+      "css": ".ds-dugme { display: inline-block; min-width: 200px; padding: 14px 12px; text-align: center; background: var(--kobalt, #1f3c9c); color: var(--sir, #fbfcfa); font-family: \"Geologica\", system-ui, sans-serif; font-weight: 500; font-size: 1.0625rem; text-decoration: none; border-radius: 0; transition: background-color .2s cubic-bezier(.2,.8,.2,1); } .ds-dugme:hover { background: var(--kobalt-koyu, #172d77); } .ds-dugme:focus-visible { outline: 2px solid var(--kobalt, #1f3c9c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Drafted, unpainted action (Ara) beside the primary, separated by a charcoal rule.",
+      "html": "<a class=\"ds-dugme-ikincil\" href=\"#\">Ara</a>",
+      "css": ".ds-dugme-ikincil { display: inline-block; min-width: 200px; padding: 14px 12px; text-align: center; background: transparent; color: var(--komur, #2f2e31); border-left: 1px solid var(--komur, #2f2e31); font-family: \"Geologica\", system-ui, sans-serif; font-weight: 500; font-size: 1.0625rem; text-decoration: none; border-radius: 0; transition: background-color .2s cubic-bezier(.2,.8,.2,1); } .ds-dugme-ikincil:hover { background: var(--kagit-koyu, #dde1dc); } .ds-dugme-ikincil:focus-visible { outline: 2px solid var(--kobalt, #1f3c9c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Title Block (Antet)",
+      "kind": "custom",
+      "refersTo": "title-block",
+      "description": "The drawing's corner information box: address, live status for today, sheet identity, and the action pair as its bottom row.",
+      "html": "<aside class=\"ds-antet\"><dl><div><dt>Atölye</dt><dd>Çarşı Sokak No 14, İznik, Bursa</dd></div><div><dt>Bugün</dt><dd><span class=\"ds-durum\">Açık, 18.00'e kadar</span></dd></div><div><dt>Bu kâğıt</dt><dd>KC-01 Saz ve lale, ölçek 1:1</dd></div></dl><div class=\"ds-eylemler\"><a class=\"ds-a1\" href=\"#\">Yol tarifi al</a><a class=\"ds-a2\" href=\"#\">Ara</a></div></aside>",
+      "css": ".ds-antet { width: min(420px, 100%); background: rgb(233 236 232 / .93); border: 1px solid var(--komur, #2f2e31); color: var(--komur, #2f2e31); font-family: \"Geologica\", system-ui, sans-serif; font-weight: 350; font-size: .95rem; line-height: 1.65; } .ds-antet dl { margin: 0; } .ds-antet dl > div { display: grid; grid-template-columns: 6.5rem 1fr; border-bottom: 1px solid var(--cizgi, #b9bdb7); } .ds-antet dt { padding: 10px 12px; color: var(--kursun, #55585b); border-right: 1px solid var(--cizgi, #b9bdb7); } .ds-antet dd { margin: 0; padding: 10px 12px; } .ds-durum { font-weight: 500; } .ds-durum::before { content: \"\"; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--firuze, #2a8f8c); vertical-align: .08em; } .ds-eylemler { display: grid; grid-template-columns: 1fr 1fr; } .ds-a1, .ds-a2 { display: block; padding: 14px 12px; text-align: center; font-weight: 500; text-decoration: none; transition: background-color .2s cubic-bezier(.2,.8,.2,1); } .ds-a1 { background: var(--kobalt, #1f3c9c); color: var(--sir, #fbfcfa); } .ds-a1:hover { background: var(--kobalt-koyu, #172d77); } .ds-a2 { color: var(--komur, #2f2e31); border-left: 1px solid var(--komur, #2f2e31); } .ds-a2:hover { background: var(--kagit-koyu, #dde1dc); } .ds-a1:focus-visible, .ds-a2:focus-visible { outline: 2px solid var(--kobalt, #1f3c9c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Gloock wordmark with graphite text links laid over the hero; no fills, no hamburger.",
+      "html": "<header class=\"ds-ust\"><a class=\"ds-marka\" href=\"#\">Kobalt Çini</a><nav><a href=\"#\">Ziyaret</a><a href=\"#\">Desenler</a><a href=\"#\">Nasıl gelinir</a><a href=\"#\">Dersler</a></nav></header>",
+      "css": ".ds-ust { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; padding: 22px 24px; background: var(--kagit, #e9ece8); } .ds-marka { font: 400 1.5rem/1 \"Gloock\", \"Times New Roman\", serif; color: var(--komur, #2f2e31); text-decoration: none; } .ds-ust nav { display: flex; flex-wrap: wrap; gap: 4px 26px; } .ds-ust nav a { font-family: \"Geologica\", system-ui, sans-serif; color: var(--kursun, #55585b); text-decoration: none; font-size: .98rem; } .ds-ust nav a:hover { color: var(--komur, #2f2e31); text-decoration: underline; text-underline-offset: .22em; } .ds-ust a:focus-visible { outline: 2px solid var(--kobalt, #1f3c9c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Pattern Tile",
+      "kind": "card",
+      "refersTo": "painted-tile",
+      "description": "A painted tile with its pricked sheet half lifted over it; hover or press peels the sheet back to reveal the paint.",
+      "html": "<figure class=\"ds-desen\"><button class=\"ds-karo\" type=\"button\" aria-label=\"Boyalı karoyu göster\"><svg viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"36\" fill=\"#1f3c9c\" stroke=\"#1b2240\"/><circle cx=\"50\" cy=\"50\" r=\"11\" fill=\"#b4372b\" stroke=\"#1b2240\"/><circle cx=\"50\" cy=\"50\" r=\"4\" fill=\"#2a8f8c\" stroke=\"#1b2240\"/></svg></button><div class=\"ds-kalkik\"><div class=\"ds-kagit\"><svg viewBox=\"0 0 100 100\"><g fill=\"none\" stroke=\"#2f2e31\" stroke-width=\"1.9\" stroke-dasharray=\"0 3.4\" stroke-linecap=\"round\"><circle cx=\"50\" cy=\"50\" r=\"36\"/><circle cx=\"50\" cy=\"50\" r=\"11\"/><circle cx=\"50\" cy=\"50\" r=\"4\"/></g></svg></div></div><figcaption><span class=\"ds-kod\">KC-07</span> Madalyon</figcaption></figure>",
+      "css": ".ds-desen { position: relative; width: 180px; margin: 0; font-family: \"Geologica\", system-ui, sans-serif; color: var(--komur, #2f2e31); } .ds-karo { display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; cursor: pointer; background: var(--sir, #fbfcfa); box-shadow: 0 1px 2px rgb(27 34 64 / .12), 0 10px 24px -12px rgb(27 34 64 / .3); } .ds-karo:focus-visible { outline: 2px solid var(--kobalt, #1f3c9c); outline-offset: 3px; } .ds-kalkik { position: absolute; inset: 0 0 auto 0; aspect-ratio: 1; filter: drop-shadow(-6px 3px 6px rgb(47 46 49 / .22)); pointer-events: none; } .ds-kagit { height: 100%; background: var(--kagit, #e9ece8); clip-path: inset(0 0 0 46%); transition: clip-path .6s cubic-bezier(.16,1,.3,1); } .ds-desen:hover .ds-kagit, .ds-karo:focus-visible + .ds-kalkik .ds-kagit { clip-path: inset(0 0 0 88%); } .ds-karo svg, .ds-kagit svg { display: block; width: 100%; height: 100%; } .ds-desen figcaption { margin-top: 18px; font-size: 1.05rem; } .ds-kod { font-weight: 600; font-variant-numeric: tabular-nums; margin-right: 6px; } @media (prefers-reduced-motion: reduce) { .ds-kagit { transition: none; } }"
+    },
+    {
+      "name": "Sheet Heading with Pencil Note",
+      "kind": "custom",
+      "refersTo": "pencil-note",
+      "description": "A sheet's Gloock headline followed by its single Caveat graphite note, inside corner registration marks.",
+      "html": "<section class=\"ds-yaprak\"><h2>Nasıl gelinir</h2><p class=\"ds-kalem\">İstanbul'dan yaklaşık 2,5 saat</p></section>",
+      "css": ".ds-yaprak { position: relative; padding: 56px 40px 40px; background: var(--kagit, #e9ece8); border-bottom: 1px solid var(--cizgi, #b9bdb7); color: var(--komur, #2f2e31); } .ds-yaprak::before, .ds-yaprak::after { content: \"\"; position: absolute; top: 20px; width: 22px; height: 22px; border: 0 solid var(--kursun, #55585b); } .ds-yaprak::before { left: 14px; border-width: 1px 0 0 1px; } .ds-yaprak::after { right: 14px; border-width: 1px 1px 0 0; } .ds-yaprak h2 { margin: 0; font-family: \"Gloock\", \"Times New Roman\", serif; font-weight: 400; font-size: 3rem; line-height: 1.04; letter-spacing: -.01em; } .ds-kalem { display: inline-block; margin: 10px 0 0; color: var(--kursun, #55585b); font: 500 1.45rem/1.1 \"Caveat\", \"Segoe Print\", cursive; transform: rotate(-1.5deg); transform-origin: left center; padding-bottom: 3px; background: linear-gradient(var(--kursun, #55585b), var(--kursun, #55585b)) 0 100% / 100% 1px no-repeat; }"
+    },
+    {
+      "name": "Route Stations",
+      "kind": "custom",
+      "refersTo": "place",
+      "description": "An ordered journey: hollow station rings joined by pounce dots, the destination painted cobalt.",
+      "html": "<ol class=\"ds-rota\"><li><span class=\"ds-yer\">Yalova</span><span class=\"ds-bacak\">Karayoluyla 60 km, yaklaşık 1 saat</span></li><li><span class=\"ds-yer\">Kobalt Çini</span><span class=\"ds-bacak\">Çarşı Sokak No 14</span></li></ol>",
+      "css": ".ds-rota { list-style: none; margin: 0; padding: 0; max-width: 40rem; font-family: \"Geologica\", system-ui, sans-serif; font-weight: 350; color: var(--komur, #2f2e31); } .ds-rota li { position: relative; display: grid; grid-template-columns: minmax(10rem, 15rem) 1fr; gap: 4px 32px; padding: 0 0 34px 34px; } .ds-rota li::before { content: \"\"; position: absolute; left: 0; top: .45em; width: 13px; height: 13px; border: 1px solid var(--komur, #2f2e31); border-radius: 50%; background: var(--kagit, #e9ece8); } .ds-rota li:last-child::before { background: var(--kobalt, #1f3c9c); border-color: var(--kobalt, #1f3c9c); } .ds-rota li:not(:last-child)::after { content: \"\"; position: absolute; left: 5px; top: 1.6em; bottom: .2em; width: 3px; background: radial-gradient(circle, var(--komur, #2f2e31) 1.1px, transparent 1.6px) 0 0 / 3px 9px repeat-y; } .ds-yer { font: 400 1.35rem/1.2 \"Gloock\", \"Times New Roman\", serif; } .ds-bacak { color: var(--kursun, #55585b); }"
+    },
+    {
+      "name": "Glazed Footer",
+      "kind": "custom",
+      "refersTo": "footer-glazed",
+      "description": "The page ends on a painted cobalt tile: Gloock closing line, address and contact in Glaze White.",
+      "html": "<footer class=\"ds-alt\"><p class=\"ds-alt-baslik\">Gelin, deseninizi birlikte seçelim.</p><p>Çarşı Sokak No 14, İznik<br>Salıdan pazara, 10.00–18.00</p><p><a href=\"#\">0224 000 00 00</a></p></footer>",
+      "css": ".ds-alt { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; align-items: end; padding: 72px 32px 48px; background: var(--kobalt, #1f3c9c); color: var(--sir, #fbfcfa); font-family: \"Geologica\", system-ui, sans-serif; font-weight: 350; } .ds-alt p { margin: 0; } .ds-alt-baslik { font: 400 2.4rem/1.05 \"Gloock\", \"Times New Roman\", serif; max-width: 14ch; } .ds-alt a { color: var(--sir, #fbfcfa); text-decoration-thickness: 1px; text-underline-offset: .22em; } .ds-alt a:hover { text-decoration-thickness: 2px; } .ds-alt a:focus-visible { outline: 2px solid var(--sir, #fbfcfa); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pounce Sheet",
+    "overview": "The whole page is the silkme kâğıdı on the master's table: a cool sheet of tracing paper, pricked along a pattern with a needle and dusted with charcoal so the drawing comes through. Everything unpainted belongs to that sheet: charcoal dust, graphite notes, hairline drafting rules, corner registration marks, and a title block (antet) in the bottom-right corner that carries the address, today's open/closed status and the actions. Cobalt is the exception. It appears only where something has actually been painted: the primary action, links, the painted face of a tile and the glazed cobalt footer the page ends on.\n\nThe density is that of a working drawing, not a brochure. Sheets are generous (72–144px between them), text is set in narrow measures, and structure comes from 1px rules and the title block's ruled cells rather than cards, fills or shadows. The page rejects the category's default split hero, a cobalt tile photo beside a headline. The first viewport is paper, holes and a headline, with the title block holding the facts a visitor needs to come.\n\nThe motion is the craft. On load, a single pounce sweep dusts charcoal through the holes left to right (1700ms). After that, a fine pointer keeps pouncing wherever it passes. Pattern tiles sit under a half-lifted pricked sheet that peels back to reveal the paint. Reduced motion gets the finished dusted state and no peel transition.\n\nScope: this system covers `2-impeccable/` only; `1-frontend-design/` is a separate trial outside it. The North Star, colour names and rule lines were chosen by the documenter under the user's explicit delegation, not confirmed in an interview.",
+    "keyCharacteristics": [
+      "Cool tracing-paper ground with charcoal and graphite; cobalt only as paint.",
+      "Gloock drafted titles, Geologica plain text, one Caveat pencil note per sheet.",
+      "Square corners everywhere; circles only for needle holes and the things a needle or compass makes.",
+      "Hairline rules, corner registration marks and a ruled title block carry structure.",
+      "Flat paper; only physical objects (a fired tile, a lifted sheet) cast shadows."
+    ],
+    "rules": [
+      {
+        "name": "The Painted Mark Rule",
+        "body": "Cobalt appears only where something is painted: action, link, focus, selection, tile paint, destination, footer. Never as a tint, a section wash, a border on unpainted UI or a decorative accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Glaze Stays on the Tile Rule",
+        "body": "Turquoise and coral are glaze colours. They belong to painted tiles; the single exception is the turquoise open-now dot.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Hands Rule",
+        "body": "Gloock drafts, Geologica speaks, Caveat annotates. Caveat appears at most once per sheet, always after the headline it comments on, never above a heading and never as a label or button.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Facts Rule",
+        "body": "Pattern codes, dates, places-left and prices use tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sheet Rule",
+        "body": "A new section is a new sheet: hairline at the bottom, registration marks at the top corners, nothing else to separate it. No backgrounds or cards to mark sections.",
+        "section": "layout"
+      },
+      {
+        "name": "The Title Block Rule",
+        "body": "Address, today's status and the primary actions live together in the ruled title block. A visitor never needs more than one step to reach directions or a phone call.",
+        "section": "layout"
+      },
+      {
+        "name": "The Sequence Is Pricked Rule",
+        "body": "Where order is real (visit steps, route legs), the items are joined by a line of pounce dots (1.1px charcoal dots every 9px). Unordered lists do not get the dotted line.",
+        "section": "layout"
+      },
+      {
+        "name": "The Only Objects Cast Shadows Rule",
+        "body": "UI chrome (buttons, title block, nav, tables, footer) is shadowless. A shadow means a physical tile or sheet.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the ground Tracing Paper and let charcoal, graphite and hairlines carry all unpainted structure.",
+      "Do reserve İznik Cobalt for painted things: the primary action, links, focus, selection, tile paint, the destination marker and the footer.",
+      "Do put address, today's status and the directions/call actions together in the title block.",
+      "Do start every new section as a sheet: 1px hairline at the bottom, 22px graphite registration marks at the top corners.",
+      "Do join genuinely ordered steps with a pounce-dot line (1.1px charcoal dots every 9px).",
+      "Do keep corners square; use circles only for holes, step rings, route stations and the status dot.",
+      "Do give text over the pricked motif a paper-coloured halo rather than a box or a shadow.",
+      "Do honour reduced motion: show the finished dusted state and drop the peel transition."
+    ],
+    "donts": [
+      "Don't build the category's split hero of a cobalt tile photo beside a headline.",
+      "Don't use cobalt as a background wash, tint, card fill or decorative accent on unpainted UI.",
+      "Don't use turquoise or coral outside painted tiles, except the open-now dot.",
+      "Don't put shadows on buttons, the title block, nav, tables or the footer; shadows belong to tiles and lifted sheets.",
+      "Don't round corners on buttons, blocks, tiles or tables.",
+      "Don't set Caveat above a heading, as a label, in a button, or more than once per sheet.",
+      "Don't separate sections with background colour bands or cards."
+    ]
+  }
+}

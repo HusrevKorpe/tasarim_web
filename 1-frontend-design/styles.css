@@ -1,0 +1,271 @@
+/* Kobalt Çini — renkler İznik sırlarından, yazı Alegreya ailesinden. */
+
+@property --cizgi { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --b1 { syntax: "<number>"; inherits: true; initial-value: 1; }
+@property --b2 { syntax: "<number>"; inherits: true; initial-value: 1; }
+@property --b3 { syntax: "<number>"; inherits: true; initial-value: 1; }
+
+:root {
+  --sir-beyazi: #f6f7f4;
+  --kobalt-renk: #1e3f8f;
+  --firuze-renk: #2e9c9a;
+  --mercan-renk: #b23a2e;
+  --yaprak-renk: #3f7d4e;
+  --murekkep: #1c2540;
+  --derz: #d6d9d2;
+  --soluk: #4d5670;
+
+  /* karonun kullandığı değişkenler; renk düzenleri bunları değiştirir */
+  --zemin: var(--sir-beyazi);
+  --kobalt: var(--kobalt-renk);
+  --firuze: var(--firuze-renk);
+  --mercan: var(--mercan-renk);
+  --yesil: var(--yaprak-renk);
+  --tahrir: var(--murekkep);
+
+  --serif: "Alegreya", Georgia, serif;
+  --sans: "Alegreya Sans", system-ui, sans-serif;
+  --kenar: clamp(16px, 5vw, 64px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, ol, ul, figure { margin: 0; }
+
+body {
+  background: var(--sir-beyazi);
+  color: var(--murekkep);
+  font: 400 1.125rem/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--kobalt-renk); text-underline-offset: 0.2em; }
+a:focus-visible, .dugme:focus-visible {
+  outline: 3px solid var(--mercan-renk);
+  outline-offset: 3px;
+}
+
+.gizli {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.1; }
+h1 { font-size: clamp(2.5rem, 5.4vw, 4.5rem); letter-spacing: -0.01em; text-wrap: balance; }
+h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+
+/* ---------- karo ---------- */
+
+.t {
+  stroke: var(--tahrir);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: var(--cizgi);
+}
+.zemin { fill: var(--zemin); }
+.kobalt { fill: var(--kobalt); fill-opacity: var(--b1); }
+.firuze { fill: var(--firuze); fill-opacity: var(--b2); }
+.mercan { fill: var(--mercan); fill-opacity: var(--b3); }
+.yesil { fill: var(--yesil); fill-opacity: var(--b3); }
+.sap { fill: none; }
+.kalin { fill: none; stroke: var(--yesil); stroke-opacity: var(--b3); stroke-width: 4; }
+
+.pano {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: var(--derz);
+  padding: 3px;
+}
+.pano svg { display: block; width: 100%; height: auto; }
+.ayna-x { transform: scaleX(-1); }
+.ayna-y { transform: scaleY(-1); }
+.ayna-xy { transform: scale(-1, -1); }
+
+/* Sayfa açılışındaki tek hareket: önce tahrir çizilir, sonra renkler sırayla sürülür. */
+.canlan {
+  animation:
+    ciz 1.8s cubic-bezier(.45, 0, .25, 1) both,
+    boya1 .6s ease-out 1.5s both,
+    boya2 .6s ease-out 1.9s both,
+    boya3 .6s ease-out 2.3s both;
+}
+@keyframes ciz { from { --cizgi: 1; } to { --cizgi: 0; } }
+@keyframes boya1 { from { --b1: 0; } to { --b1: 1; } }
+@keyframes boya2 { from { --b2: 0; } to { --b2: 1; } }
+@keyframes boya3 { from { --b3: 0; } to { --b3: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .canlan { animation: none; }
+}
+
+/* ---------- üst ---------- */
+
+.ust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 32px;
+  padding: 24px var(--kenar);
+}
+.marka {
+  font: italic 400 1.6rem/1 var(--serif);
+  color: var(--murekkep);
+  text-decoration: none;
+}
+.ust nav { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.ust nav a { color: var(--murekkep); text-decoration: none; }
+.ust nav a:hover { color: var(--kobalt-renk); text-decoration: underline; }
+
+/* ---------- giriş ---------- */
+
+.giris {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 96px);
+  padding: clamp(24px, 5vw, 72px) var(--kenar) clamp(64px, 9vw, 128px);
+}
+.giris-metin { max-width: 34rem; }
+.giris-metin p { margin-top: 24px; color: var(--soluk); max-width: 30rem; }
+.giris .pano { max-width: 560px; justify-self: end; width: 100%; }
+
+.dugmeler { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.dugme {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--kobalt-renk);
+  color: var(--sir-beyazi);
+  border: 2px solid var(--kobalt-renk);
+  border-radius: 2px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color .15s, color .15s;
+}
+.dugme:hover { background: var(--murekkep); border-color: var(--murekkep); }
+.dugme.ikincil { background: transparent; color: var(--kobalt-renk); }
+.dugme.ikincil:hover { background: var(--kobalt-renk); color: var(--sir-beyazi); }
+
+/* ---------- bölümler ---------- */
+
+.bolum {
+  padding: clamp(56px, 8vw, 112px) var(--kenar);
+  border-top: 1px solid var(--derz);
+}
+.bolum-giris { margin-top: 12px; max-width: 38rem; color: var(--soluk); }
+
+.duvar {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 40px 24px;
+}
+.urun h3 { margin-top: 16px; }
+.urun p { color: var(--soluk); font-size: 1rem; }
+.urun .fiyat { margin-top: 4px; color: var(--murekkep); font-weight: 500; }
+
+.renk-gece {
+  --zemin: #17306e; --kobalt: #eef0ea; --firuze: #6cc1ba;
+  --mercan: #d6584a; --yesil: #86b894; --tahrir: #0e1b42;
+}
+.renk-firuze {
+  --kobalt: var(--firuze-renk); --firuze: var(--kobalt-renk);
+  --mercan: var(--kobalt-renk); --yesil: #2f6f6d;
+}
+.renk-safran {
+  --kobalt: var(--mercan-renk); --firuze: #e0a73e;
+  --mercan: var(--kobalt-renk); --yesil: var(--yaprak-renk);
+}
+
+/* Aşamalar gerçekten bir sıra olduğu için numaralı liste. */
+.asamalar {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 40px 24px;
+  counter-reset: asama;
+}
+.asama { position: relative; counter-increment: asama; }
+.asama svg {
+  display: block; width: 100%; height: auto;
+  outline: 3px solid var(--derz);
+}
+.asama h3 { margin-top: 18px; }
+.asama h3::before {
+  content: counter(asama) ". ";
+  color: var(--kobalt-renk);
+}
+.asama p { margin-top: 8px; font-size: 1rem; color: var(--soluk); max-width: 30ch; }
+
+.asama-camur { --tahrir: transparent; --b1: 0; --b2: 0; --b3: 0; }
+.asama-tahrir { --b1: 0; --b2: 0; --b3: 0; }
+.asama-sir::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  aspect-ratio: 1;
+  background: linear-gradient(130deg, rgb(255 255 255 / .4) 0 12%, rgb(255 255 255 / 0) 38%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- dersler ---------- */
+
+.ders-tablosu {
+  margin-top: 32px;
+  width: 100%;
+  max-width: 52rem;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.ders-tablosu th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--soluk);
+  padding: 0 16px 12px 0;
+  border-bottom: 2px solid var(--murekkep);
+}
+.ders-tablosu td { padding: 16px 16px 16px 0; border-bottom: 1px solid var(--derz); }
+.ders-tablosu td:last-child, .ders-tablosu th:last-child { text-align: right; padding-right: 0; }
+.ders-tablosu .dolu td { color: var(--soluk); }
+
+/* ---------- alt ---------- */
+
+.alt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  padding: clamp(56px, 8vw, 96px) var(--kenar);
+  background: var(--kobalt-renk);
+  color: var(--sir-beyazi);
+}
+.alt h2 { margin-bottom: 12px; }
+.alt a { color: var(--sir-beyazi); }
+.alt a:focus-visible { outline-color: var(--sir-beyazi); }
+
+/* ---------- mobil ---------- */
+
+@media (max-width: 760px) {
+  .giris { grid-template-columns: 1fr; }
+  .giris .pano { justify-self: stretch; order: -1; }
+  .ders-tablosu thead { display: none; }
+  .ders-tablosu tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--derz);
+  }
+  .ders-tablosu td { border: 0; padding: 2px 0; }
+  .ders-tablosu td:nth-child(2) { grid-column: 1 / -1; order: -1; font-family: var(--serif); font-size: 1.2rem; }
+  .ders-tablosu td:nth-child(3)::after { content: " yer"; }
+  .ders-tablosu .dolu td:nth-child(3)::after { content: ""; }
+}

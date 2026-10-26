@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kobalt Çini Atölyesi</title>
+  <meta name="description" content="İznik'te elde çizilip boyanan çini karolar ve cumartesi dersleri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Çeyrek karo: dört kopyası aynalanınca tam desen çıkar. Renkler CSS değişkenlerinden gelir. -->
+  <svg width="0" height="0" class="gizli" aria-hidden="true">
+    <defs>
+      <g id="karanfil">
+        <path class="t yesil" pathLength="1" d="M132 98 Q 146 82 146 64"/>
+        <g transform="translate(146 64) rotate(20)">
+          <path class="t mercan" pathLength="1" d="M-16 -14 Q -24 -32 -13 -40 Q -6 -31 0 -43 Q 6 -31 13 -40 Q 24 -32 16 -14 Z"/>
+          <path class="t firuze" pathLength="1" d="M-7 -16 Q -9 -26 0 -32 Q 9 -26 7 -16 Z"/>
+          <path class="t yesil" pathLength="1" d="M0 2 L -10 -14 L 10 -14 Z"/>
+        </g>
+      </g>
+      <g id="kenar">
+        <circle class="t kobalt" pathLength="1" cx="200" cy="0" r="32"/>
+        <circle class="t zemin" pathLength="1" cx="200" cy="0" r="15"/>
+        <circle class="t kobalt" pathLength="1" cx="100" cy="22" r="4"/>
+      </g>
+      <symbol id="ceyrek" viewBox="0 0 200 200">
+        <rect class="zemin" width="200" height="200"/>
+        <!-- merkez madalyon -->
+        <circle class="t kobalt" pathLength="1" cx="200" cy="200" r="78"/>
+        <g class="t zemin">
+          <ellipse pathLength="1" cx="200" cy="148" rx="10" ry="22" transform="rotate(-90 200 200)"/>
+          <ellipse pathLength="1" cx="200" cy="148" rx="10" ry="22" transform="rotate(-45 200 200)"/>
+          <ellipse pathLength="1" cx="200" cy="148" rx="10" ry="22"/>
+        </g>
+        <circle class="t mercan" pathLength="1" cx="200" cy="200" r="26"/>
+        <circle class="t firuze" pathLength="1" cx="200" cy="200" r="10"/>
+        <!-- dış köşe gülü -->
+        <circle class="t firuze" pathLength="1" cx="0" cy="0" r="46"/>
+        <circle class="t zemin" pathLength="1" cx="0" cy="0" r="27"/>
+        <circle class="t mercan" pathLength="1" cx="0" cy="0" r="12"/>
+        <!-- kenar yarım göbekler -->
+        <use href="#kenar"/>
+        <use href="#kenar" transform="matrix(0 1 1 0 0 0)"/>
+        <!-- köşegen lale ve saz yaprakları -->
+        <path class="t sap" pathLength="1" d="M50 50 L 112 112"/>
+        <path class="kalin" d="M50 50 L 112 112"/>
+        <path class="t yesil" pathLength="1" d="M82 82 C 72 100, 62 114, 44 130 C 68 120, 82 104, 82 82 Z"/>
+        <path class="t yesil" pathLength="1" d="M82 82 C 100 72, 114 62, 130 44 C 120 68, 104 82, 82 82 Z"/>
+        <path class="t mercan" pathLength="1" transform="translate(110 110) rotate(135)" d="M0 0 C -14 -4, -18 -22, -12 -38 L -6 -26 L 0 -42 L 6 -26 L 12 -38 C 18 -22, 14 -4, 0 0 Z"/>
+        <!-- köşegene göre aynalı karanfiller -->
+        <use href="#karanfil"/>
+        <use href="#karanfil" transform="matrix(0 1 1 0 0 0)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="ust">
+    <a class="marka" href="#">Kobalt Çini</a>
+    <nav aria-label="Ana menü">
+      <a href="#karolar">Karolar</a>
+      <a href="#nasil">Nasıl yapılır</a>
+      <a href="#dersler">Dersler</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="giris">
+      <div class="giris-metin">
+        <h1>İznik çinisini eski usulle, elde yapıyoruz.</h1>
+        <p>İznik'teki atölyemizde kuvarslı çamurdan karo ve tabak üretiyoruz. Her desen fırçayla çizilir, her renk tek tek sürülür. Siparişle çalışıyor, cumartesileri ders veriyoruz.</p>
+        <div class="dugmeler">
+          <a class="dugme" href="#karolar">Karoları gör</a>
+          <a class="dugme ikincil" href="#dersler">Derse yazıl</a>
+        </div>
+      </div>
+      <div class="pano canlan" role="img" aria-label="Lale, karanfil ve saz yaprağı desenli dört karodan oluşan pano">
+        <svg viewBox="0 0 200 200"><use href="#ceyrek"/></svg>
+        <svg viewBox="0 0 200 200" class="ayna-x"><use href="#ceyrek"/></svg>
+        <svg viewBox="0 0 200 200" class="ayna-y"><use href="#ceyrek"/></svg>
+        <svg viewBox="0 0 200 200" class="ayna-xy"><use href="#ceyrek"/></svg>
+      </div>
+    </section>
+
+    <section id="karolar" class="bolum">
+      <h2>Karolar</h2>
+      <p class="bolum-giris">Aynı desen, dört renk düzeninde. Karolar 20×20 cm, dörtlü set olarak satılır ve yaklaşık üç haftada hazırlanır.</p>
+      <ul class="duvar">
+        <li class="urun renk-klasik">
+          <div class="pano kucuk" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-x"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-y"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-xy"><use href="#ceyrek"/></svg>
+          </div>
+          <h3>Lale, klasik</h3>
+          <p>Beyaz zemin, kobalt ve mercan kırmızısı</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="urun renk-gece">
+          <div class="pano kucuk" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-x"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-y"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-xy"><use href="#ceyrek"/></svg>
+          </div>
+          <h3>Lale, gece</h3>
+          <p>Kobalt zemin, açık firuze</p>
+          <p class="fiyat">6.200 ₺ / 4 karo</p>
+        </li>
+        <li class="urun renk-firuze">
+          <div class="pano kucuk" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-x"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-y"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-xy"><use href="#ceyrek"/></svg>
+          </div>
+          <h3>Lale, firuze</h3>
+          <p>Beyaz zemin, firuze ağırlıklı</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="urun renk-safran">
+          <div class="pano kucuk" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-x"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-y"><use href="#ceyrek"/></svg><svg viewBox="0 0 200 200" class="ayna-xy"><use href="#ceyrek"/></svg>
+          </div>
+          <h3>Lale, safran</h3>
+          <p>Mercan madalyon, safran sarısı</p>
+          <p class="fiyat">6.200 ₺ / 4 karo</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="nasil" class="bolum">
+      <h2>Bir karo nasıl yapılır</h2>
+      <ol class="asamalar">
+        <li class="asama asama-camur">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#ceyrek"/></svg>
+          <h3>Çamur ve astar</h3>
+          <p>Kuvars, kil ve camdan hazırlanan çamur kalıba basılır, kurutulur ve beyaz astarla kaplanır.</p>
+        </li>
+        <li class="asama asama-tahrir">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#ceyrek"/></svg>
+          <h3>Tahrir</h3>
+          <p>Desen, delikli bir kâğıtla karoya aktarılır ve ince fırçayla koyu boyayla çizilir.</p>
+        </li>
+        <li class="asama asama-boya">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#ceyrek"/></svg>
+          <h3>Boyama</h3>
+          <p>Renkler çizginin içine sırayla sürülür: önce kobalt, sonra firuze, en son mercan kırmızısı.</p>
+        </li>
+        <li class="asama asama-sir">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#ceyrek"/></svg>
+          <h3>Sır ve fırın</h3>
+          <p>Şeffaf sırla kaplanan karo yaklaşık 900 derecede pişer. Renkler ancak fırından sonra parlar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="dersler" class="bolum">
+      <h2>Cumartesi dersleri</h2>
+      <p class="bolum-giris">Altı kişilik gruplarla, 10.00–16.00 arası. Malzeme ve öğle yemeği dahil. Boyadığınız karo pişirildikten sonra kargoyla gönderilir.</p>
+      <table class="ders-tablosu">
+        <thead>
+          <tr><th scope="col">Tarih</th><th scope="col">Ders</th><th scope="col">Kalan yer</th><th scope="col">Ücret</th><th scope="col"><span class="gizli">İşlem</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>7 Kasım</td><td>Tahrire giriş</td><td>2</td><td>2.400 ₺</td><td><a href="#iletisim">Yer ayırt</a></td></tr>
+          <tr><td>14 Kasım</td><td>Kendi karonu boya</td><td>4</td><td>2.900 ₺</td><td><a href="#iletisim">Yer ayırt</a></td></tr>
+          <tr><td>21 Kasım</td><td>Tahrire giriş</td><td>6</td><td>2.400 ₺</td><td><a href="#iletisim">Yer ayırt</a></td></tr>
+          <tr class="dolu"><td>28 Kasım</td><td>Tabak boyama</td><td>Doldu</td><td>3.200 ₺</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer id="iletisim" class="alt">
+    <div>
+      <h2>Atölyeye gelin</h2>
+      <p>Çarşı Sokak No 14, İznik, Bursa<br>Salıdan pazara, 10.00–18.00</p>
+    </div>
+    <div>
+      <p>Sipariş ve ders kaydı için<br><a href="tel:+902240000000">0224 000 00 00</a><br><a href="mailto:merhaba@kobaltcini.example">merhaba@kobaltcini.example</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kobalt Çini, İznik</title>
+  <meta name="description" content="İznik'te sipariş üzerine elde çizilen çini karolar. Deseni ve ölçüyü atölyede birlikte seçiyoruz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Gloock&family=Geologica:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Silkme motifi: JS bu yolları örnekleyip iğne deliklerine çevirir. -->
+  <svg class="kaynak" viewBox="0 0 1000 1000" aria-hidden="true">
+    <path class="m" d="M90 900 C 260 860 360 680 520 560 C 660 455 760 330 880 120 C 860 330 770 500 640 610 C 480 745 330 860 90 900 Z"/>
+    <path class="m" d="M110 893 C 330 820 520 650 650 540 C 760 440 830 300 872 150"/>
+    <path class="m" d="M520 560 C 470 470 420 420 330 400 C 380 470 430 520 520 560 Z"/>
+    <path class="m" d="M330 400 C 300 360 290 330 300 300"/>
+    <path class="m" d="M300 300 C 250 285 235 215 255 150 L 280 200 L 300 120 L 320 200 L 345 150 C 365 215 350 285 300 300 Z"/>
+    <path class="m" d="M300 290 C 285 250 285 210 300 170"/>
+    <path class="m" d="M640 610 C 700 640 750 690 760 742"/>
+    <path class="m" d="M740 742 L 780 742 L 772 790 L 748 790 Z"/>
+    <path class="m" d="M748 790 Q 700 820 712 870 Q 735 850 742 880 Q 760 855 778 880 Q 785 850 808 870 Q 820 820 772 790 Z"/>
+    <path class="m" d="M450 690 C 420 650 430 610 470 590"/>
+    <circle class="m" cx="200" cy="560" r="78"/>
+    <circle class="m" cx="200" cy="560" r="34"/>
+    <circle class="m" cx="200" cy="560" r="10"/>
+    <circle class="m" cx="255" cy="560" r="12"/><circle class="m" cx="239" cy="599" r="12"/>
+    <circle class="m" cx="200" cy="615" r="12"/><circle class="m" cx="161" cy="599" r="12"/>
+    <circle class="m" cx="145" cy="560" r="12"/><circle class="m" cx="161" cy="521" r="12"/>
+    <circle class="m" cx="200" cy="505" r="12"/><circle class="m" cx="239" cy="521" r="12"/>
+    <circle class="m" cx="860" cy="560" r="17"/><circle class="m" cx="900" cy="560" r="17"/><circle class="m" cx="880" cy="595" r="17"/>
+    <path class="m" d="M540 920 C 580 880 620 960 660 920 C 700 880 740 960 780 920"/>
+  </svg>
+
+  <!-- Desen karoları: aynı sembol hem boyalı karo hem delikli kâğıt olarak çizilir. -->
+  <svg width="0" height="0" class="kaynak" aria-hidden="true">
+    <symbol id="kc01" viewBox="0 0 100 100">
+      <path class="ln p-k" d="M50 88 C 40 80 30 82 18 68 C 32 70 42 76 50 84 Z"/>
+      <path class="ln p-k" d="M50 88 C 60 80 70 82 82 68 C 68 70 58 76 50 84 Z"/>
+      <path class="ln" d="M50 70 L 50 94"/>
+      <path class="ln p-m" d="M50 70 C 36 66 32 46 37 28 L 44 40 L 50 20 L 56 40 L 63 28 C 68 46 64 66 50 70 Z"/>
+      <path class="ln p-f" d="M50 62 C 45 54 45 46 50 38 C 55 46 55 54 50 62 Z"/>
+    </symbol>
+    <symbol id="kc04" viewBox="0 0 100 100">
+      <path class="ln" d="M50 76 L 50 94"/>
+      <path class="ln p-f" d="M50 90 C 42 84 34 86 24 78 C 36 78 44 82 50 86 Z"/>
+      <path class="ln p-k" d="M44 62 L 56 62 L 54 76 L 46 76 Z"/>
+      <path class="ln p-m" d="M44 62 Q 28 52 32 34 Q 42 44 43 30 Q 50 42 57 30 Q 58 44 68 34 Q 72 52 56 62 Z"/>
+      <path class="ln p-k" d="M44 56 Q 50 46 56 56"/>
+    </symbol>
+    <symbol id="kc07" viewBox="0 0 100 100">
+      <circle class="ln p-k" cx="50" cy="50" r="36"/>
+      <circle class="ln p-z" cx="72" cy="50" r="7"/><circle class="ln p-z" cx="65.6" cy="65.6" r="7"/>
+      <circle class="ln p-z" cx="50" cy="72" r="7"/><circle class="ln p-z" cx="34.4" cy="65.6" r="7"/>
+      <circle class="ln p-z" cx="28" cy="50" r="7"/><circle class="ln p-z" cx="34.4" cy="34.4" r="7"/>
+      <circle class="ln p-z" cx="50" cy="28" r="7"/><circle class="ln p-z" cx="65.6" cy="34.4" r="7"/>
+      <circle class="ln p-m" cx="50" cy="50" r="11"/>
+      <circle class="ln p-f" cx="50" cy="50" r="4"/>
+    </symbol>
+    <symbol id="kc12" viewBox="0 0 100 100">
+      <circle class="ln p-k" cx="37" cy="34" r="11"/>
+      <circle class="ln p-k" cx="63" cy="34" r="11"/>
+      <circle class="ln p-k" cx="50" cy="56" r="11"/>
+      <path class="ln dalga" d="M14 78 C 26 68 38 88 50 78 C 62 68 74 88 86 78"/>
+      <path class="ln dalga" d="M14 88 C 26 78 38 98 50 88 C 62 78 74 98 86 88"/>
+    </symbol>
+  </svg>
+
+  <a class="atla" href="#ana">İçeriğe geç</a>
+
+  <header class="ust">
+    <a class="marka" href="#">Kobalt Çini</a>
+    <nav aria-label="Ana menü">
+      <a href="#ziyaret">Ziyaret</a>
+      <a href="#desenler">Desenler</a>
+      <a href="#yol">Nasıl gelinir</a>
+      <a href="#dersler">Dersler</a>
+    </nav>
+  </header>
+
+  <main id="ana">
+    <section class="giris" aria-labelledby="baslik">
+      <canvas class="silkme" aria-hidden="true"></canvas>
+      <div class="giris-metin">
+        <h1 id="baslik">Karonuz burada, sizin ölçünüze elde çizilir.</h1>
+        <p>Kobalt Çini, İznik'te sipariş üzerine çini karo ve pano yapan bir atölye. Deseni, rengi ve ölçüyü atölyede, gerçek numunelere bakarak birlikte seçiyoruz.</p>
+      </div>
+
+      <aside class="antet" aria-label="Atölye bilgisi">
+        <dl>
+          <div><dt>Atölye</dt><dd>Çarşı Sokak No 14, İznik, Bursa</dd></div>
+          <div><dt>Bugün</dt><dd><span class="durum" data-durum>Salıdan pazara, 10.00–18.00</span></dd></div>
+          <div><dt>Bu kâğıt</dt><dd>KC-01 Saz ve lale, ölçek 1:1</dd></div>
+        </dl>
+        <div class="eylemler">
+          <a class="dugme" href="https://www.google.com/maps/search/?api=1&amp;query=%C4%B0znik%20%C3%87ar%C5%9F%C4%B1%2C%20Bursa" rel="noopener">Yol tarifi al</a>
+          <a class="dugme ikincil" href="tel:+902240000000">Ara<span class="uzun">: 0224 000 00 00</span></a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="ziyaret" class="yaprak">
+      <h2>Ziyarette ne oluyor</h2>
+      <p class="kalem">bir saat kadar sürer</p>
+      <ol class="adimlar">
+        <li>
+          <h3>Numunelere bakarsınız</h3>
+          <p>Atölyedeki numune duvarında desenleri ve renkleri gün ışığında görürsünüz.</p>
+        </li>
+        <li>
+          <h3>Ölçüyü konuşuruz</h3>
+          <p>Duvarın ya da tezgâhın ölçüsünü getirin, fotoğraf da yeter. Karo sayısını yerleşime göre birlikte çıkarırız.</p>
+        </li>
+        <li>
+          <h3>Desen kâğıda çizilir</h3>
+          <p>Seçtiğiniz desen sizin ölçünüze silkme kâğıdına çizilir, iğneyle delinir ve kömür tozuyla karoya aktarılır.</p>
+        </li>
+        <li>
+          <h3>Üç hafta sonra teslim</h3>
+          <p>Boyanan karolar sırlanıp fırınlanır. Kargoyla gönderilir ya da gelip alırsınız.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="desenler" class="yaprak">
+      <h2>Desenler</h2>
+      <p class="kalem">hepsi atölyede asılı</p>
+      <p class="aciklama">Atölyede görmek istediğiniz desenin kodunu not edin, numune duvarında hemen bulalım.</p>
+      <ul class="desenler">
+        <li>
+          <figure class="desen">
+            <button class="karo" type="button" aria-pressed="false" aria-label="Boyalı karoyu göster"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc01"/></svg></button>
+            <div class="kalkik"><div class="kagit"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc01"/></svg></div></div>
+            <figcaption><span class="kod">KC-01</span> Lale</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="desen">
+            <button class="karo" type="button" aria-pressed="false" aria-label="Boyalı karoyu göster"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc04"/></svg></button>
+            <div class="kalkik"><div class="kagit"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc04"/></svg></div></div>
+            <figcaption><span class="kod">KC-04</span> Karanfil</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="desen">
+            <button class="karo" type="button" aria-pressed="false" aria-label="Boyalı karoyu göster"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc07"/></svg></button>
+            <div class="kalkik"><div class="kagit"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc07"/></svg></div></div>
+            <figcaption><span class="kod">KC-07</span> Madalyon</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="desen">
+            <button class="karo" type="button" aria-pressed="false" aria-label="Boyalı karoyu göster"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc12"/></svg></button>
+            <div class="kalkik"><div class="kagit"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#kc12"/></svg></div></div>
+            <figcaption><span class="kod">KC-12</span> Çintemani</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section id="yol" class="yaprak iki">
+      <div class="yaprak-bas">
+      <h2>Nasıl gelinir</h2>
+      <p class="kalem">İstanbul'dan yaklaşık 2,5 saat</p>
+      <p class="aciklama">Süreler yaklaşıktır, trafiğe ve feribot saatine göre değişir.</p>
+      </div>
+      <div>
+      <ol class="rota">
+        <li><span class="yer">İstanbul, Yenikapı</span><span class="bacak">Hızlı feribotla Yalova'ya, yaklaşık 1 sa 15 dk</span></li>
+        <li><span class="yer">Yalova</span><span class="bacak">Karayoluyla 60 km, yaklaşık 1 saat</span></li>
+        <li><span class="yer">İznik otogarı</span><span class="bacak">Çarşıya yürüyerek 10 dakika</span></li>
+        <li><span class="yer">Kobalt Çini</span><span class="bacak">Çarşı Sokak No 14</span></li>
+      </ol>
+      <p class="not">Bursa'dan geliyorsanız: 80 km, araçla yaklaşık 1 sa 15 dk.</p>
+      </div>
+    </section>
+
+    <section id="dersler" class="yaprak iki">
+      <div class="yaprak-bas">
+      <h2>Cumartesi dersleri</h2>
+      <p class="kalem">en fazla 6 kişi</p>
+      <p class="aciklama">Altı kişilik gruplar, 10.00–16.00. Malzeme ve öğle yemeği dahil. Boyadığınız karo fırından çıkınca kargoyla gelir.</p>
+      </div>
+      <div>
+      <table class="dersler">
+        <thead><tr><th scope="col">Tarih</th><th scope="col">Ders</th><th scope="col">Yer</th><th scope="col">Ücret</th></tr></thead>
+        <tbody>
+          <tr><td>7 Kasım</td><td>Tahrire giriş</td><td>2</td><td>2.400 ₺</td></tr>
+          <tr><td>14 Kasım</td><td>Kendi karonu boya</td><td>4</td><td>2.900 ₺</td></tr>
+          <tr><td>21 Kasım</td><td>Tahrire giriş</td><td>6</td><td>2.400 ₺</td></tr>
+        </tbody>
+      </table>
+      <p class="not">Yer ayırtmak için arayın: <a href="tel:+902240000000">0224 000 00 00</a></p>
+      <p class="not">Tarihler, kontenjan ve ücretler örnektir.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="alt">
+    <p class="alt-baslik">Gelin, deseninizi birlikte seçelim.</p>
+    <p>Çarşı Sokak No 14, İznik, Bursa<br>Salıdan pazara, 10.00–18.00</p>
+    <p><a href="tel:+902240000000">0224 000 00 00</a><br><a href="mailto:merhaba@kobaltcini.example">merhaba@kobaltcini.example</a></p>
+    <p class="demo">Bu site bir tasarım denemesidir. Atölye, adres ve iletişim bilgileri örnektir.</p>
+  </footer>
+
+  <script src="silkme.js"></script>
+</body>
+</html>
