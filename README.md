@@ -13,7 +13,7 @@ Bunu ölçmek için **konu hep aynı tutuluyor**, sadece skill değişiyor. Böy
 | 1 | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) (Anthropic, resmi) | [`1-frontend-design/`](1-frontend-design/) | Bitti |
 | 2 | [Impeccable](https://github.com/pbakaus/impeccable) (Paul Bakaus) | [`2-impeccable/`](2-impeccable/) | Bitti |
 | 3 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) (Leonxlnx) | [`3-taste/`](3-taste/) | Bitti |
-| 4 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | | Sırada |
+| 4 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (NextLevelBuilder) | [`4-ui-ux-pro-max/`](4-ui-ux-pro-max/) | Bitti |
 | 5 | [Emil Kowalski Skills](https://github.com/emilkowalski/skills) | | Sırada |
 
 Bu beş skill, 2026'da "en iyi UI skill'leri" listelerinde en sık geçenler arasından seçildi. GitHub yıldızlarına ve güncelliğine de bakıldı.
@@ -112,16 +112,65 @@ Ardından üç bakış turu yapıldı. Son puan: tasarım 8, kullanılabilirlik 
 - Müze karoları atölyenin ürünü değil. Sayfada müze adlarıyla gösteriliyorlar ve kaynakları altbilgide. Desen kodları (KC-01 vb.) örnek.
 - Açılıştaki karo bir çizim. Yanındaki gerçek müze karolarının yanında basit kalıyor.
 
+## 4. UI/UX Pro Max
+
+![UI/UX Pro Max ile yapılan site](ekranlar/4-ui-ux-pro-max.png)
+
+**Skill nasıl çalışıyor:** Diğer üçü Claude'a nasıl düşüneceğini anlatıyor. Bu ise bir veritabanı. Yanında gelen Python script'i (yalnız standart kütüphane, internete çıkmıyor) CSV tablolarında arama yapıyor: 192 ürün kategorisi, 79 stil, 192 palet, 74 yazı tipi eşi, 119 UX kuralı. Süreç şöyle:
+
+1. **Analiz.** İstekten ürün türü, kitle, stil sözcükleri ve teknoloji çıkarılır. Teknoloji tahmin edilmez, projeden okunur.
+2. **Tasarım sistemi.** `search.py "<sorgu>" --design-system` ürün kategorisini bulur. Sonra o kategorinin kurallarıyla stili, paleti, yazı tiplerini, sayfa kalıbını, efektleri ve yasakları tek seferde verir. Üç ayar düğmesi var: çeşitlilik, hareket ve yoğunluk. Bu denemede 6, 4 ve 3 seçildi.
+3. **Doğrulama.** Sonucun kategorisi kontrol edilir. Uymuyorsa sorgu bir kez daraltılıp tekrarlanır. Eşleşme yoksa uydurulmaz, açıkça söylenir.
+4. **Kayıt.** `--persist` sistemi [`design-system/kobalt-cini/MASTER.md`](design-system/kobalt-cini/MASTER.md) dosyasına yazar. Sayfaya özel sapmalar ayrı bir dosyaya gider: [`pages/anasayfa.md`](design-system/kobalt-cini/pages/anasayfa.md). Bu dosya Master'ı ezer.
+5. **Ek aramalar.** Renk, yazı tipi, stil, sayfa kalıbı ve UX için tek konulu, 2–5 sözcüklük aramalar yapılır.
+6. **Teslim öncesi liste.** Kontrast 4.5:1, görünür odak, 44 piksel dokunma alanı, emoji yerine SVG ikon, `prefers-reduced-motion`, 375/768/1024/1440 genişlikler.
+
+**Arama günlüğü:**
+
+- İlk sorgu ("handmade ceramic tile atelier artisan") kategori bulamadı. Genel bir sonuç geldi: SaaS mavisi ve turuncu.
+- Veritabanında zanaat ya da atölye kategorisi yok. En yakını *Home Decoration & Interior Design* çıktı. Kitle ev sahibi ve mimar olduğu için bu seçildi.
+- O kategorinin sistemi:
+  - Stil: İsviçre minimalizmi.
+  - Kalıp: "kaydırdıkça anlatı". Her bölüm bir bölüm, her bölüm sonunda küçük çağrı, en sonda büyük çağrı.
+  - Palet: sıcak gri ve kehribar.
+  - Yazı tipleri: Cinzel ve Josefin Sans.
+- Stil aramasında *Nature Distilled* çıktı ("zanaat ürünleri, ev dekoru için"). Yüzeydeki hafif doku buradan geliyor.
+- Kobalt rengi için palet araması eşleşme bulamadı. Tüm sorgular ve kararlar sayfa dosyasında tablo olarak duruyor.
+
+**Ortaya çıkan:** Dört deneme içinde en derli toplu ve en alışıldık sayfa.
+
+- Bölümler numaralı: 1 Ölçü, 2 Yapım, 3 Desenler, 4 Dersler, 5 Ziyaret. Üst çubukta hangi bölümde olduğun işaretleniyor, altında ince bir ilerleme çizgisi var.
+- **Yapım bölümü:** Solda yapışkan bir karo duruyor. Sağdaki beş adım (gövde, astar ve tahrir, boya, sır, fırın) ekrana girdikçe karo o adımdaki hâline geçiyor: kurumuş çamur, yalnız çizgiler, boyalı, sırın altında süt beyazı soluk, fırından çıkmış parlak.
+- Altı desen kartı kodla çizildi: lale, çintemani, bulut, hatayi, saz, rumi. Kartlar kademeli beliriyor. Skill bunun için GSAP kodu verdi, teknoloji aynı kalsın diye aynısı CSS ile yazıldı.
+- Ders tablosu var. Kapanış kobalt bir ziyaret bölümü: adres, saat, yol, telefon ve e-posta Lucide ikonlarıyla.
+
+**Süreç:** Kısa ve mekanik. Bir analiz, yaklaşık on arama, iki kayıt dosyası, kodlama ve listenin kontrolü. Skill'in kendi ekran görüntüsü ya da eleştiri adımı yok.
+
+**Dürüst notlar:**
+
+- Veritabanı yaklaşımı konu kategorideyse güçlü, değilse zayıf. "İznik çini atölyesi" hiçbir satıra oturmadı. Gelen sistem bir dekorasyon uygulaması içindi. Bu yüzden İsviçre stili "kurumsal uygulama, SaaS" için önerilen bir stil, Cinzel ise "emlak, lüks" havasında bir yazı tipi.
+- Yalnızca ana renk değiştirildi. Sıcak gri yerine kobalt kondu, çünkü atölyenin adı o boya. Skill sonuçları "kural değil öneri" sayıyor ve depo kurallarını üstün tutuyor, sapma sayfa dosyasına yazıldı. Kehribar düğme rengi İznik paletinde yok ama skill'in seçimi olduğu için bırakıldı.
+- Tasarım sistemi ilk sorguda kötü bir sonuç verdiği hâlde verdiği şeyi düzgün gerekçelendiriyor. Asıl fark yaratan, sonucu doğrulama ve bir kez yeniden deneme kuralı oldu.
+- Sade HTML/CSS için hazır kılavuz yok. En yakını html-tailwind ama Tailwind kullanılmıyor. Skill "teknolojiyi tahmin etme" dediği için bu adım atlandı.
+- Teslim öncesi listesinin uzun hâli (`pro-rules.md`) mobil uygulamalar için. Web için skill'in yönlendirdiği `quick-reference.md` §1–§3 kullanıldı.
+- Skill'de ölçüm aracı yok. Listeyi kontrol etmek için Chrome'u açan küçük bir script yazıldı (repoda değil). Script dört genişlikte metin kontrastına, yatay taşmaya ve 44 pikselden küçük hedeflere baktı.
+  - Kontrast ve taşma temiz çıktı.
+  - Marka bağlantısı 44 pikselin altındaydı, düzeltildi.
+  - Telefonda ders tablosunda tarih ve ücretler kırılıyordu, düzeltildi.
+  - Elle geçişte bir hata daha bulundu: kobalt ziyaret bölümünde odak halkası da kobalttı, yani görünmüyordu.
+- Skill'in script'leri `python3 -I` ile çalışmıyor, çünkü kendi modüllerini script klasöründen yüklüyor. Kod okunup yalnız standart kütüphane kullandığı görüldükten sonra normal çalıştırıldı.
+- Repoda ana skill'in yanında altı yan skill daha var (marka, slayt, afiş gibi). Bu iş için yalnız `ui-ux-pro-max` kuruldu.
+
 ## Karşılaştırma
 
-| | frontend-design | Impeccable | Taste Skill |
-|---|---|---|---|
-| Kodlamadan önce | Kısa bir plan | Sorular, ürün dosyası, yedi aday yön, sözleşme | Envanter, argüman, script'in çektiği üç yön, fikir cümlesi |
-| Fikir | Konuya uygun ama beklenen | Konunun içinden çıkan, alışılmadık | Konudan çıkan ama yönün kalıbına oturan |
-| Görseller | Kodla çizim | Kodla çizim | Gerçek müze ve arşiv görselleri, video, kaynaklı |
-| Kontrol | Kendi ekran görüntüsüne bakıp düzeltme | Bağımsız inceleyici, iki düzeltme turu | Tarayıcıda ölçüm (FAIL/WARN), jüri puanlı üç bakış turu |
-| Çıktılar | Site | Site, PRODUCT.md, DESIGN.md, design.json | Site, notlar, yön dosyası, ölçüm görüntüleri |
-| Süre ve maliyet | Düşük | Yüksek | En yüksek |
+| | frontend-design | Impeccable | Taste Skill | UI/UX Pro Max |
+|---|---|---|---|---|
+| Kodlamadan önce | Kısa bir plan | Sorular, ürün dosyası, yedi aday yön, sözleşme | Envanter, argüman, script'in çektiği üç yön, fikir cümlesi | Veritabanı araması, tasarım sistemi dosyası, sayfa sapmaları |
+| Fikir | Konuya uygun ama beklenen | Konunun içinden çıkan, alışılmadık | Konudan çıkan ama yönün kalıbına oturan | Kategorinin kalıbı (kaydırdıkça anlatı), içeriği konuya uyarlanmış |
+| Görseller | Kodla çizim | Kodla çizim | Gerçek müze ve arşiv görselleri, video, kaynaklı | Kodla çizim, Lucide ikonlar |
+| Kontrol | Kendi ekran görüntüsüne bakıp düzeltme | Bağımsız inceleyici, iki düzeltme turu | Tarayıcıda ölçüm (FAIL/WARN), jüri puanlı üç bakış turu | Teslim öncesi kural listesi (araç yok, elle ve yardımcı script'le) |
+| Çıktılar | Site | Site, PRODUCT.md, DESIGN.md, design.json | Site, notlar, yön dosyası, ölçüm görüntüleri | Site, MASTER.md, sayfa sapma dosyası |
+| Süre ve maliyet | Düşük | Yüksek | En yüksek | Düşük–orta |
 
 ## Çalıştırma
 
@@ -146,6 +195,10 @@ npx impeccable install
 
 # Taste Skill (Node 22+ ve Chrome gerekir; görsel aramak için internet)
 npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
+
+# UI/UX Pro Max (Python 3 gerekir, internet gerekmez)
+npx ui-ux-pro-max-cli init --ai claude
+# ya da: repodaki .claude/skills/ui-ux-pro-max klasörünü projenin .claude/skills/ altına kopyala
 ```
 
 ## Klasörler
@@ -155,9 +208,11 @@ index.html              karşılaştırma sayfası
 1-frontend-design/      1. deneme
 2-impeccable/           2. deneme (silkme.js: delik ve toz efekti, açık/kapalı durumu)
 3-taste/                3. deneme (karo.js: aşama akordeonu, renk değiştiren üst çubuk; gorseller/: müze ve arşiv görselleri, credits.json)
+4-ui-ux-pro-max/        4. deneme (sayfa.js: ilerleme çubuğu, etkin bölüm, adım adım yapılan karo)
 PRODUCT.md              Impeccable'ın ürün dosyası
 DESIGN.md               Impeccable'ın tasarım sistemi kaydı
 .impeccable/            yön sözleşmesi, inceleme ekran görüntüleri, design.json
 .taste-skill/           notlar ve eleştiri turları, çekilen yön (direction.json), ölçüm ekran görüntüleri
+design-system/          UI/UX Pro Max'in tasarım sistemi (MASTER.md) ve sayfa sapmaları (pages/anasayfa.md)
 ekranlar/               README görselleri
 ```

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kobalt Çini, İznik</title>
+  <meta name="description" content="İznik'te sipariş üzerine elde çizilip boyanan çini karo ve panolar. Deseni, rengi ve ölçüyü atölyede birlikte seçiyoruz.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" class="gizli" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Lucide ikonları (ISC lisansı) -->
+      <symbol id="i-konum" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-saat" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-telefon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-posta" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-yol" viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8-8-2z"/></symbol>
+
+      <!-- Lale karosunun parçaları: aynı biçim hem boya hem tahrir katmanında kullanılır -->
+      <path id="s-cerceve" d="M8 8h184v184H8z M20 20v160h160V20z"/>
+      <path id="s-kose" d="M20 20h26a26 26 0 0 1-26 26z"/>
+      <path id="s-orta" d="M100 60c13 18 15 44 0 64-15-20-13-46 0-64z"/>
+      <path id="s-yan" d="M100 124c-19-4-30-23-27-48 10 13 19 29 27 48zm0 0c19-4 30-23 27-48-10 13-19 29-27 48z"/>
+      <path id="s-canak" d="M82 122c7 11 29 11 36 0-8 5-28 5-36 0z"/>
+      <path id="s-sap" d="M98 128h4v34h-4z"/>
+      <path id="s-saz" d="M100 160c-21-8-42-27-50-53 19 14 36 31 50 53zm0 0c21-8 42-27 50-53-19 14-36 31-50 53z"/>
+      <path id="s-hatayi" d="M56 52a10 10 0 1 1 0 20 10 10 0 1 1 0-20zm88 0a10 10 0 1 1 0 20 10 10 0 1 1 0-20z"/>
+      <path id="s-gobek" d="M56 58a4 4 0 1 1 0 8 4 4 0 1 1 0-8zm88 0a4 4 0 1 1 0 8 4 4 0 1 1 0-8z"/>
+      <linearGradient id="g-parilti" x1="0" y1="0" x2="1" y2="1">
+        <stop offset=".18" stop-color="#fff" stop-opacity="0"/>
+        <stop offset=".26" stop-color="#fff" stop-opacity=".28"/>
+        <stop offset=".34" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+
+      <symbol id="karo-lale" viewBox="0 0 200 200">
+        <rect class="k-govde" width="200" height="200" fill="#E7DCCB"/>
+        <rect class="k-astar" width="200" height="200" fill="#FBF9F4"/>
+        <g class="k-boya">
+          <use href="#s-cerceve" fill="#1D3A8F" fill-rule="evenodd"/>
+          <use href="#s-kose" fill="#2A9D9A"/>
+          <use href="#s-kose" fill="#2A9D9A" transform="rotate(90 100 100)"/>
+          <use href="#s-kose" fill="#2A9D9A" transform="rotate(180 100 100)"/>
+          <use href="#s-kose" fill="#2A9D9A" transform="rotate(270 100 100)"/>
+          <use href="#s-saz" fill="#3F7D4E"/>
+          <use href="#s-sap" fill="#3F7D4E"/>
+          <use href="#s-yan" fill="#1D3A8F"/>
+          <use href="#s-orta" fill="#C8322B"/>
+          <use href="#s-canak" fill="#2A9D9A"/>
+          <use href="#s-hatayi" fill="#1D3A8F"/>
+          <use href="#s-gobek" fill="#C8322B"/>
+        </g>
+        <g class="k-tahrir" fill="none" stroke="#1B1F2E" stroke-width="1.6" stroke-linejoin="round">
+          <rect x="8" y="8" width="184" height="184"/><rect x="20" y="20" width="160" height="160"/>
+          <use href="#s-kose"/><use href="#s-kose" transform="rotate(90 100 100)"/>
+          <use href="#s-kose" transform="rotate(180 100 100)"/><use href="#s-kose" transform="rotate(270 100 100)"/>
+          <use href="#s-saz"/><use href="#s-sap"/><use href="#s-yan"/><use href="#s-orta"/>
+          <use href="#s-canak"/><use href="#s-hatayi"/><use href="#s-gobek"/>
+        </g>
+        <rect class="k-sir" width="200" height="200" fill="#EEF0F1"/>
+        <rect class="k-parilti" width="200" height="200" fill="url(#g-parilti)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+
+  <header class="ust">
+    <div class="ust-ic">
+      <a class="marka" href="#">Kobalt Çini</a>
+      <nav class="bolumler" aria-label="Bölümler">
+        <ol>
+          <li><a href="#olcu"><span aria-hidden="true">1</span> Ölçü</a></li>
+          <li><a href="#yapim"><span aria-hidden="true">2</span> Yapım</a></li>
+          <li><a href="#desenler"><span aria-hidden="true">3</span> Desenler</a></li>
+          <li><a href="#dersler"><span aria-hidden="true">4</span> Dersler</a></li>
+          <li><a href="#ziyaret"><span aria-hidden="true">5</span> Ziyaret</a></li>
+        </ol>
+      </nav>
+      <a class="btn btn-primary btn-kucuk" href="#ziyaret">Ziyaret planla</a>
+    </div>
+    <div class="ilerleme" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="icerik">
+    <section class="giris kap" aria-labelledby="giris-baslik">
+      <div class="giris-metin">
+        <h1 id="giris-baslik">İznik çinisi, ölçünüze çizilip elde boyanır</h1>
+        <p class="giris-alt">Kuvarslı çamurdan karo ve pano yapıyoruz, sipariş üzerine. Deseni, rengi ve ölçüyü atölyede, gün ışığında numunelere bakarak birlikte seçiyoruz.</p>
+        <div class="dugmeler">
+          <a class="btn btn-primary" href="#ziyaret">Atölyeye gelin <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+          <a class="btn btn-secondary" href="#yapim">Nasıl yapılır</a>
+        </div>
+        <ul class="kunye" role="list">
+          <li><svg class="ikon" aria-hidden="true"><use href="#i-konum"/></svg> Çarşı Sokak No 14, İznik</li>
+          <li><svg class="ikon" aria-hidden="true"><use href="#i-saat"/></svg> Salıdan pazara, 10.00–18.00</li>
+        </ul>
+      </div>
+      <figure class="giris-karo">
+        <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: kobalt çerçeveli, ortasında mercan lale, iki yanında yeşil saz yaprağı olan bir karo"><use href="#karo-lale"/></svg>
+        <figcaption>Lale karosu, 20×20 cm. Çizimdir, fotoğraf değil.</figcaption>
+      </figure>
+    </section>
+
+    <section id="olcu" class="bolum kap" aria-labelledby="olcu-baslik">
+      <p class="bolum-no">Bölüm 1</p>
+      <h2 id="olcu-baslik">Raftaki karo duvarınıza göre yapılmadı</h2>
+      <div class="uclu">
+        <article class="card" data-reveal>
+          <h3>Ölçü</h3>
+          <p>Hazır karo standart boydadır, duvar ona uyar. Biz karoyu duvara uydururuz: pano, bordür ve köşe parçaları ölçünüze çizilir.</p>
+        </article>
+        <article class="card" data-reveal style="--i:1">
+          <h3>Renk</h3>
+          <p>Kobalt ekranda başka, mutfak ışığında başka görünür. Renkleri numune duvarında, gün ışığında birlikte seçeriz.</p>
+        </article>
+        <article class="card" data-reveal style="--i:2">
+          <h3>Desen</h3>
+          <p>Lale, saz, çintemani, rumi. Deseni yerinize göre sadeleştirir ya da çoğaltırız, kâğıt üstünde görürsünüz.</p>
+        </article>
+      </div>
+      <a class="mini-cta" href="#ziyaret">Numunelere bakmaya gelin <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+    </section>
+
+    <section id="yapim" class="bolum yapim" aria-labelledby="yapim-baslik">
+      <div class="kap">
+        <p class="bolum-no">Bölüm 2</p>
+        <h2 id="yapim-baslik">Bir karo beş adımda, üç haftada yapılır</h2>
+        <div class="yapim-izgara">
+          <div class="yapim-karo">
+            <svg class="karo" id="yapan-karo" viewBox="0 0 200 200" role="img" aria-label="Lale karosu, şu anki adımdaki hâliyle"><use href="#karo-lale"/></svg>
+            <p class="yapim-durum" aria-live="polite"><span id="asama-adi">Fırından çıkmış hâli</span></p>
+          </div>
+          <ol class="adimlar">
+            <li class="adim" data-asama="1">
+              <p class="adim-gun">1–3. gün</p>
+              <h3>Gövde</h3>
+              <p>Kuvars, kil ve camdan hazırlanan çamur kalıba basılır ve günlerce kurur. Karo bu hâliyle bisküvi renginde, mattır.</p>
+            </li>
+            <li class="adim" data-asama="2">
+              <p class="adim-gun">4–6. gün</p>
+              <h3>Astar ve tahrir</h3>
+              <p>Beyaz astar sürülür. Desen delikli kâğıtla karoya kömür tozuyla aktarılır, sonra ince fırçayla koyu boyayla çizilir. Buna tahrir denir.</p>
+            </li>
+            <li class="adim" data-asama="3">
+              <p class="adim-gun">7–12. gün</p>
+              <h3>Boya</h3>
+              <p>Renkler çizginin içine sırayla sürülür: önce kobalt, sonra firuze ve yeşil, en son mercan kırmızısı. Mercan kalın sürülür, fırında kabarık durur.</p>
+            </li>
+            <li class="adim" data-asama="4">
+              <p class="adim-gun">13. gün</p>
+              <h3>Sır</h3>
+              <p>Karo şeffaf sıra daldırılır. Sır pişmeden önce süt beyazıdır, renkler altında soluk görünür. Endişe etmeyin, böyle olmalı.</p>
+            </li>
+            <li class="adim" data-asama="5">
+              <p class="adim-gun">14–21. gün</p>
+              <h3>Fırın</h3>
+              <p>Yaklaşık 900 derecede pişer, fırın bir gün soğur. Sır camlaşır, renkler ancak şimdi parlar. Paketleyip teslim ederiz.</p>
+            </li>
+          </ol>
+        </div>
+        <a class="mini-cta" href="#ziyaret">Fırından çıkanı atölyede görün <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+      </div>
+    </section>
+
+    <section id="desenler" class="bolum kap" aria-labelledby="desen-baslik">
+      <p class="bolum-no">Bölüm 3</p>
+      <h2 id="desen-baslik">Desenler</h2>
+      <p class="bolum-giris">Karolar 20×20 cm, dörtlü set olarak hazırlanır. Kodu not edin, numune duvarında gösterelim. Fiyatlar örnektir.</p>
+      <ul class="desenler" role="list">
+        <li class="card desen" data-reveal>
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: lale karosu"><use href="#karo-lale"/></svg>
+          <h3>Lale</h3>
+          <p class="desen-bilgi"><span>KC-01</span> Kobalt, mercan, firuze</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="card desen" data-reveal style="--i:1">
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: beyaz zeminde üç kobalt top ve iki mercan dalga çizgisiyle çintemani karosu">
+            <rect width="200" height="200" fill="#FBF9F4"/>
+            <g fill="#1D3A8F" stroke="#1B1F2E" stroke-width="1.6"><circle cx="76" cy="62" r="16"/><circle cx="124" cy="62" r="16"/><circle cx="100" cy="100" r="16"/></g>
+            <g fill="#FBF9F4"><circle cx="80" cy="58" r="6"/><circle cx="128" cy="58" r="6"/><circle cx="104" cy="96" r="6"/></g>
+            <g fill="none" stroke="#C8322B" stroke-width="8" stroke-linecap="round"><path d="M40 140q15-16 30 0t30 0 30 0 30 0"/><path d="M40 164q15-16 30 0t30 0 30 0 30 0"/></g>
+          </svg>
+          <h3>Çintemani</h3>
+          <p class="desen-bilgi"><span>KC-12</span> Kobalt, mercan</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="card desen" data-reveal style="--i:2">
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: kobalt zemin üstünde kıvrılan beyaz ve mercan bulut kuşağı">
+            <rect width="200" height="200" fill="#1D3A8F"/>
+            <path d="M0 116c30-46 58 34 100-12s70-40 100 4" fill="none" stroke="#FBF9F4" stroke-width="22" stroke-linecap="round"/>
+            <path d="M0 116c30-46 58 34 100-12s70-40 100 4" fill="none" stroke="#C8322B" stroke-width="6" stroke-linecap="round"/>
+            <g fill="#2A9D9A"><circle cx="46" cy="50" r="9"/><circle cx="154" cy="160" r="9"/><circle cx="150" cy="44" r="5"/><circle cx="50" cy="160" r="5"/></g>
+          </svg>
+          <h3>Bulut kuşağı</h3>
+          <p class="desen-bilgi"><span>KC-04</span> Kobalt zemin, mercan</p>
+          <p class="fiyat">6.200 ₺ / 4 karo</p>
+        </li>
+        <li class="card desen" data-reveal style="--i:3">
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: firuze halka içinde sekiz mercan yapraklı hatayi çiçeği">
+            <rect width="200" height="200" fill="#FBF9F4"/>
+            <circle cx="100" cy="100" r="78" fill="none" stroke="#2A9D9A" stroke-width="10"/>
+            <g fill="#C8322B" stroke="#1B1F2E" stroke-width="1.4">
+              <ellipse cx="100" cy="64" rx="13" ry="28"/><ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(45 100 100)"/>
+              <ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(90 100 100)"/><ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(135 100 100)"/>
+              <ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(180 100 100)"/><ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(225 100 100)"/>
+              <ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(270 100 100)"/><ellipse cx="100" cy="64" rx="13" ry="28" transform="rotate(315 100 100)"/>
+            </g>
+            <circle cx="100" cy="100" r="18" fill="#1D3A8F" stroke="#1B1F2E" stroke-width="1.4"/>
+          </svg>
+          <h3>Hatayi</h3>
+          <p class="desen-bilgi"><span>KC-05</span> Mercan, kobalt, firuze</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="card desen" data-reveal style="--i:4">
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: çapraz uzanan yeşil saz yaprağı ve iki kobalt çiçek">
+            <rect width="200" height="200" fill="#FBF9F4"/>
+            <path d="M28 172C58 120 118 60 176 32 152 82 100 142 28 172z" fill="#3F7D4E" stroke="#1B1F2E" stroke-width="1.6"/>
+            <path d="M28 172C80 124 128 74 176 32" fill="none" stroke="#FBF9F4" stroke-width="2"/>
+            <g fill="#1D3A8F" stroke="#1B1F2E" stroke-width="1.4"><circle cx="58" cy="60" r="16"/><circle cx="148" cy="142" r="16"/></g>
+            <g fill="#C8322B"><circle cx="58" cy="60" r="5"/><circle cx="148" cy="142" r="5"/></g>
+          </svg>
+          <h3>Saz yaprağı</h3>
+          <p class="desen-bilgi"><span>KC-02</span> Yeşil, kobalt</p>
+          <p class="fiyat">5.800 ₺ / 4 karo</p>
+        </li>
+        <li class="card desen" data-reveal style="--i:5">
+          <svg class="karo" viewBox="0 0 200 200" role="img" aria-label="Çizim: mercan zemin üstünde beyaz kenarlı iki kobalt rumi">
+            <rect width="200" height="200" fill="#C8322B"/>
+            <g fill="#1D3A8F" stroke="#FBF9F4" stroke-width="4" stroke-linejoin="round">
+              <path d="M100 22c42 0 62 40 42 72-10-20-26-24-42-10-16-14-32-10-42 10-20-32 0-72 42-72z"/>
+              <path d="M100 178c42 0 62-40 42-72-10 20-26 24-42 10-16 14-32 10-42-10-20 32 0 72 42 72z"/>
+            </g>
+          </svg>
+          <h3>Rumi bordür</h3>
+          <p class="desen-bilgi"><span>KC-09</span> Mercan zemin, kobalt</p>
+          <p class="fiyat">6.200 ₺ / 4 karo</p>
+        </li>
+      </ul>
+
+      <div id="dersler" class="dersler" aria-labelledby="ders-baslik">
+        <p class="bolum-no">Bölüm 4</p>
+        <h2 id="ders-baslik">Cumartesi dersleri</h2>
+        <p class="bolum-giris">Altı kişilik gruplar, 10.00–16.00. Malzeme ve öğle yemeği dahil. Boyadığınız karo pişirildikten sonra kargoyla gönderilir. Tarih ve ücretler örnektir.</p>
+        <div class="tablo-kap">
+          <table>
+            <caption class="gizli">Kasım dersleri</caption>
+            <thead><tr><th scope="col">Tarih</th><th scope="col">Ders</th><th scope="col">Kalan yer</th><th scope="col">Ücret</th></tr></thead>
+            <tbody>
+              <tr><td>7 Kasım</td><td>Tahrire giriş</td><td>2</td><td>2.400 ₺</td></tr>
+              <tr><td>14 Kasım</td><td>Kendi karonu boya</td><td>4</td><td>2.900 ₺</td></tr>
+              <tr><td>21 Kasım</td><td>Tahrire giriş</td><td>6</td><td>2.400 ₺</td></tr>
+              <tr class="dolu"><td>28 Kasım</td><td>Tabak boyama</td><td>Doldu</td><td>3.200 ₺</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a class="mini-cta" href="tel:+902240000000">Yer ayırtmak için arayın: <span class="tel">0224 000 00 00</span> <svg class="ikon" aria-hidden="true"><use href="#i-ok"/></svg></a>
+      </div>
+    </section>
+
+    <section id="ziyaret" class="ziyaret" aria-labelledby="ziyaret-baslik">
+      <div class="kap ziyaret-izgara">
+        <div>
+          <p class="bolum-no">Bölüm 5</p>
+          <h2 id="ziyaret-baslik">Gelin, numunelere bakalım</h2>
+          <p class="ziyaret-alt">Her sipariş bir ziyaretle başlar. Yarım saat ayırın, çay bizden.</p>
+          <div class="dugmeler">
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=%C3%87ar%C5%9F%C4%B1+Sokak+14+%C4%B0znik" rel="noopener">Yol tarifi al <svg class="ikon" aria-hidden="true"><use href="#i-yol"/></svg></a>
+            <a class="btn btn-ters" href="tel:+902240000000">Arayın</a>
+          </div>
+        </div>
+        <dl class="bilgiler">
+          <div><dt><svg class="ikon" aria-hidden="true"><use href="#i-konum"/></svg> Adres</dt><dd>Çarşı Sokak No 14, İznik, Bursa</dd></div>
+          <div><dt><svg class="ikon" aria-hidden="true"><use href="#i-saat"/></svg> Açık</dt><dd>Salıdan pazara, 10.00–18.00</dd></div>
+          <div><dt><svg class="ikon" aria-hidden="true"><use href="#i-yol"/></svg> Yol</dt><dd>İstanbul'dan Yenikapı–Yalova feribotu, Yalova'dan İznik otobüsü (yaklaşık bir saat). Bursa'dan otobüsle bir saat.</dd></div>
+          <div><dt><svg class="ikon" aria-hidden="true"><use href="#i-telefon"/></svg> Telefon</dt><dd><a href="tel:+902240000000">0224 000 00 00</a></dd></div>
+          <div><dt><svg class="ikon" aria-hidden="true"><use href="#i-posta"/></svg> E-posta</dt><dd><a href="mailto:merhaba@kobaltcini.example">merhaba@kobaltcini.example</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="alt kap">
+    <p>Kobalt Çini hayalî bir atölyedir. Adres, telefon, fiyat ve tarihler örnektir. Karo görselleri çizimdir.</p>
+    <p>4. deneme: <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">UI/UX Pro Max</a> · <a href="../index.html">Bütün denemeler</a></p>
+  </footer>
+
+  <script src="sayfa.js" defer></script>
+</body>
+</html>
